@@ -24,8 +24,30 @@ html {
 /*** Header ***/
 
 /*** Navigation ***/
+.mainNavigation {
 
+    text-transform: uppercase;
+    background-color: black;
+}
 
+.mainNavigation ul {
+    display: flex;
+    list-style: none;
+    flex-direction: row;
+    justify-content: space-around;
+    
+}
+
+.mainNavigation li {
+    padding: 30px 0;
+}
+
+.mainNavigation a {
+
+    text-decoration: none;
+    color: white;
+    
+}
 /*** Navigation ***/
 
 /*** Hero ***/
