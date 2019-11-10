@@ -23,6 +23,8 @@ html {
 
     --font-header: 'Coda Caption', sans-serif;
     --font-body: 'Marvel', sans-serif;
+
+    --gutter: 1rem;
 }
 /*** Variables ***/
 
@@ -47,7 +49,47 @@ html {
 
 /*** Team ***/
 
-/*** Form ***/
+/*** For ***/
+
+.mainForm {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: space-around;
+}
+
+.mainForm_header {
+    font-family: var(--font-header);
+    margin-bottom: var(--gutter);
+    text-align: center;
+}
+
+.contactForm {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 50%;
+    margin: 0 auto;
+}
+
+
+/* .contactForm_label { */
+    /* font-family: var(--font-body);
+    display: flex;
+    justify-content: space-between;
+    width: 100%
+} */
+
+
+.contactForm_input {
+    width: 100%;
+}
+
+.contactForm_message {
+    height: 100px;
+    width: 100%;
+}
 
 /*** Form ***/
 
