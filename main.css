@@ -30,6 +30,51 @@ html {
 
 /*** Hero ***/
 
+
+.mainHero {
+    
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 0 7% 10%;
+    height: 100vh;
+    width: 100w;
+    background: url(zoltan-tasi-0khu-rgbjzo-unsplash.jpg) no-repeat center center;
+    background-size: cover;
+}
+
+.cointainer {
+    color:#cccccc;
+    width: 30%;
+    font-size: 20px;
+    font-family: 'Coda Caption', sans-serif;
+    text-align: center;
+}
+
+.mainHero__button {
+    text-transform: uppercase;
+    font-weight: 300;
+    font-family: 'Coda Caption', sans-serif;
+    font-size: 20px;
+    height: 55px;
+    padding: 0;
+    margin: 5%;
+    box-sizing: border-box;
+    width: 200px;
+    border: none;
+    background: #ff6033;
+    color: white;
+    box-shadow: 0 20px 30px rgba(255, 96, 51, 0.3);
+}
+
+
+
+
+h1 {
+    text-transform: uppercase;
+}
+
+
 /*** Hero ***/
 
 /*** Functions ***/
