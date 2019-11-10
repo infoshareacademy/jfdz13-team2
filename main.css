@@ -14,8 +14,15 @@ html {
 
 /*** Variables ***/
 :root {
+    --color-primary: #041256;
+    --color-light: #1345E4;
+    --color-dark: #06219E;
+    --color-font-light: #E9E9EC;
+    --color-font-border: #D08A59;
+    --color-button: #D64A17;
 
-
+    --font-header: 'Coda Caption', sans-serif;
+    --font-body: 'Marvel', sans-serif;
 }
 /*** Variables ***/
 
