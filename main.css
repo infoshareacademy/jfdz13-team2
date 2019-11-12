@@ -39,47 +39,75 @@ html {
 
 
 .mainHero {
-    
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
-    padding: 0 7% 10%;
     height: 100vh;
     width: 100w;
-    background: url(zoltan-tasi-0khu-rgbjzo-unsplash.jpg) no-repeat center center;
+    background: url(photos/heroImage.jpeg) no-repeat center center;
     background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.cointainer {
-    color:#cccccc;
-    width: 30%;
-    font-size: 2px;
-    font-family: 'Coda Caption', sans-serif;
+
+
+.mainHero__title {
+    color: var(--color-font-light);
+    font-family: var(--font-header);
+    text-transform: uppercase;
+    margin: 0 5%;
     text-align: center;
+    font-size: 1.5rem;
 }
 
-.mainHero__button {
+.mainHero__productName {
+    color: transparent;
+    -webkit-text-stroke: 3px var(--color-font-light);
+    font-family: var(--font-header);
+    margin: 0 5%;
+    text-align: center;
+    font-size: 4rem;
+}
+
+
+  
+  .mainHero__button {
+    background: var(--color-button);
+    color: var(--color-font-light);
+    font-family: var(--font-header);
+    box-shadow: 5px 0px 20px var(--color-font-border);
+    display: block;
+    max-width: 14rem;
+    margin: 5% auto;
+    font-size: 1.2rem;
+    text-align: center;
     text-transform: uppercase;
-    font-weight: 300;
-    font-family: 'Coda Caption', sans-serif;
-    font-size: 20px;
-    height: 55px;
-    padding: 0;
-    margin: 5%;
-    box-sizing: border-box;
-    width: 200px;
-    border: none;
-    background: #ff6033;
-    color: white;
-    box-shadow: 0 20px 30px rgba(255, 96, 51, 0.3);
-}
+    padding:.5em 2em;
+    text-decoration: none;
+    animation: text 700ms ease-in-out infinite alternate;
+  }
+  
+  .mainHero__button:hover {
+    box-shadow: 0 0 0 ;
+  }
+  
+  .shape{
+    transform: skew(-20deg);
+  }
+  
+  .mainHero__buttonText{
+    display:inline-block;
+    transform: skew(20deg);
+  }
 
+  @keyframes text {
+    from {
+      color: var(--color-font-light);
+    }
+    to {
+      color: transparent;
+    }
+  }
 
-
-
-h1 {
-    text-transform: uppercase;
-}
 
 
 /*** Hero ***/
