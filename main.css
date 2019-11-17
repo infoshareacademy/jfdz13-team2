@@ -37,10 +37,17 @@ body {
 /*** Header ***/
 
 /*** Navigation ***/
-
-.checkbox span {
+.checkbox.checkbox.checkbox {
     display: none;
-    visibility: hidden;
+}
+
+.menu li {
+    background: var(--color-light);
+}
+
+.menu a {
+    text-decoration: none;
+    color: var(--color-font-light);
 }
 
 @media (max-width: 1024px) {
