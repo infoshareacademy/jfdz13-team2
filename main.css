@@ -37,25 +37,30 @@ html {
 
 /*** Hero ***/
 
-
-.mainHero {
+.hero {
     height: 100vh;
     width: 100w;
+}
+.mainHero {
     background: url(photos/heroImage.jpeg) no-repeat center center;
     background-size: cover;
     display: flex;
-    align-items: flex-end;
+    align-items: flex-start;
     justify-content: center;
+}
+
+.mainHero__btn {
+  margin-top: 9rem;
 }
 
 .mainHero__title {
     color: transparent;
-    -webkit-text-stroke: 3px var(--color-font-light);
+    -webkit-text-stroke: 1px var(--color-font-light);
     font-family: 'Staatliches', cursive;
     text-transform: uppercase;
     margin: 0 5%;
     text-align: center;
-    font-size: 3rem;
+    font-size: 2rem;
 }
 
 .mainHero__productName {
@@ -63,7 +68,7 @@ html {
     font-family: 'Staatliches', cursive;
     margin: 0 5%;
     text-align: center;
-    font-size: 5rem;
+    font-size: 4rem;
 }
 
   .mainHero__button {
@@ -94,7 +99,10 @@ html {
     display:inline-block;
     transform: skew(20deg);
   }
-
+  .mainHero__content {
+    margin-top: 10%;
+    font-size: 1rem;
+  }
   @keyframes text {
     from {
       color: var(--color-font-light);
@@ -130,7 +138,7 @@ html {
     font-size: 4rem;
     text-align: right;
     max-width: 60%;
-    -webkit-text-stroke: 3px var(--color-font-border);
+    -webkit-text-stroke: 1px var(--color-font-border);
   }
   .mainHero__productName {
     font-size: 6rem;
@@ -140,6 +148,15 @@ html {
   .mainHero__button {
     margin: 5% 10% 10%;
   }
+
+  .mainHero__btn {
+    margin-top: 0;
+  }
+  .mainHero__content {
+    margin-top: 0;
+    
+  }
+
 }
 
 
