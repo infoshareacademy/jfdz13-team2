@@ -88,11 +88,13 @@ html {
 
 .contactForm_input {
     width: 100%;
+    margin-top: 4px;
 }
 
 .contactForm_message {
     height: 100px;
     width: 100%;
+    margin-top: 4px;
 }
 
 .contactForm_input::placeholder {
