@@ -56,10 +56,13 @@ html {
     flex-direction: column;
     width: 100%;
     justify-content: space-around;
+    background-color: var(--color-primary);
 }
 
 .mainForm_header {
     font-family: var(--font-header);
+    color :var(--color-font-light);
+    font-display;
     margin-bottom: var(--gutter);
     text-align: center;
 }
@@ -71,6 +74,7 @@ html {
     justify-content: space-between;
     width: 50%;
     margin: 0 auto;
+    margin-bottom: var(--gutter);
 }
 
 
@@ -89,6 +93,14 @@ html {
 .contactForm_message {
     height: 100px;
     width: 100%;
+}
+
+.contactForm_input::placeholder {
+    font-family: var(--font-body);
+}
+
+.contactForm_message::placeholder {
+    font-family: var(--font-body);
 }
 
 /*** Form ***/
