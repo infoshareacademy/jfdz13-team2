@@ -184,6 +184,129 @@ body {
 
 /*** Hero ***/
 
+.hero {
+    height: 100vh;
+    width: 100w;
+}
+.mainHero {
+    background: url(photos/heroImage.jpeg) no-repeat center center;
+    background-size: cover;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.mainHero__btn {
+  margin-top: 9rem;
+}
+
+.mainHero__title {
+    color: transparent;
+    -webkit-text-stroke: 1px var(--color-font-light);
+    font-family: 'Staatliches', cursive;
+    text-transform: uppercase;
+    margin: 0 5%;
+    text-align: center;
+    font-size: 2rem;
+}
+
+.mainHero__productName {
+    color: var(--color-font-light);
+    font-family: 'Staatliches', cursive;
+    margin: 0 5%;
+    text-align: center;
+    font-size: 4rem;
+}
+
+  .mainHero__button {
+    background: var(--color-button);
+    color: var(--color-font-light);
+    font-family: var(--font-header);
+    box-shadow: 5px 0px 20px var(--color-font-border);
+    display: block;
+    max-width: 14rem;
+    margin: 5% auto 15%;
+    font-size: 1.2rem;
+    text-align: center;
+    text-transform: uppercase;
+    padding:.5em 2em;
+    text-decoration: none;
+    animation: text 700ms ease-in-out infinite alternate;
+  }
+  
+  .mainHero__button:hover {
+    box-shadow: 0 0 0;
+  }
+  
+  .shape{
+    transform: skew(-20deg);
+  }
+  
+  .mainHero__buttonText{
+    display:inline-block;
+    transform: skew(20deg);
+  }
+  .mainHero__content {
+    margin-top: 10%;
+    font-size: 1rem;
+  }
+  @keyframes text {
+    from {
+      color: var(--color-font-light);
+    }
+    to {
+      color: transparent;
+    }
+  }
+  .mainHero__asidePicture {
+    display: none;
+  }
+
+@media (min-width: 992px) {
+  .mainHero {
+    background: none;
+  }
+  .mainHero__container {
+    height: 100vh;
+    width: 60%;
+    background: url(photos/heroImage.jpeg) no-repeat center center;
+    background-size: cover;
+  }
+  .mainHero__content {
+    height: 100vh;
+    background: #01091C;
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+  }
+  .mainHero__title {
+    font-size: 4rem;
+    text-align: right;
+    max-width: 60%;
+    -webkit-text-stroke: 1px var(--color-font-border);
+  }
+  .mainHero__productName {
+    font-size: 6rem;
+    text-align: right;
+    margin: 5% 5% 0;
+  }
+  .mainHero__button {
+    margin: 5% 10% 10%;
+  }
+
+  .mainHero__btn {
+    margin-top: 0;
+  }
+  .mainHero__content {
+    margin-top: 0;
+    
+  }
+
+}
+
+
 /*** Hero ***/
 
 /*** Functions ***/
