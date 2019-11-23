@@ -61,8 +61,8 @@ html {
 
 .mainForm_header {
     font-family: var(--font-header);
+    -webkit-text-stroke: 1px var(--color-font-border);
     color :var(--color-font-light);
-    font-display;
     margin-bottom: var(--gutter);
     text-align: center;
 }
