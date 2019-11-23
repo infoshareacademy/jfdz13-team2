@@ -180,22 +180,21 @@ html {
 
 /*** Hero ***/
 
-.hero {
-  height: 100vh;
-  width: 100vw;
-}
+
 
 .mainHero {
   background: url(photos/heroImage.jpeg) no-repeat center center;
   background-size: cover;
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   justify-content: center;
+  height: 100vh;
+  width: 100%;
 }
 
-.mainHero__btn {
+/* .mainHero__btn {
   margin-top: 9rem;
-}
+} */
 
 .mainHero__title {
   color: transparent;
@@ -210,7 +209,7 @@ html {
 .mainHero__productName {
   color: var(--color-font-light);
   font-family: 'Staatliches', cursive;
-  margin: 0 5%;
+  margin: 9rem 5% 0;
   text-align: center;
   font-size: 4rem;
 }
@@ -280,7 +279,7 @@ html {
     width: 40%;
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
+    justify-content: center;
     align-items: flex-end;
   }
 
