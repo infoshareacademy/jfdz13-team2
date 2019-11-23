@@ -78,23 +78,16 @@ html {
 }
 
 
-/* .contactForm_label { */
-    /* font-family: var(--font-body);
-    display: flex;
-    justify-content: space-between;
-    width: 100%
-} */
-
-
 .contactForm_input {
+    height: 3rem;
     width: 100%;
-    margin-top: 4px;
+    margin-top: 10px;
 }
 
 .contactForm_message {
     height: 100px;
     width: 100%;
-    margin-top: 4px;
+    margin-top: 10px;
 }
 
 .contactForm_input::placeholder {
@@ -103,6 +96,12 @@ html {
 
 .contactForm_message::placeholder {
     font-family: var(--font-body);
+}
+
+@media (max-width: 1024px) {
+    .contactForm {
+        width: 70%;
+    }
 }
 
 /*** Form ***/
