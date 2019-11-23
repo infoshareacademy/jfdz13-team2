@@ -1,29 +1,37 @@
 /*** All ***/
 * {
-    margin:0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 
 }
 
 html {
 
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
+
+body {
+  
+}
+
 /*** All ***/
 
 /*** Variables ***/
 :root {
-    --color-primary: #041256;
-    --color-light: #1345E4;
-    --color-dark: #06219E;
-    --color-font-light: #E9E9EC;
-    --color-font-border: #D08A59;
-    --color-button: #D64A17;
+  --color-primary: #041256;
+  --color-light: #1345E4;
+  --color-dark: #06219E;
+  --color-font-light: #E9E9EC;
+  --color-font-border: #D08A59;
+  --color-button: #D64A17;
 
-    --font-header: 'Coda Caption', sans-serif;
-    --font-body: 'Marvel', sans-serif;
+  --font-header: 'Coda Caption', sans-serif;
+  --font-body: 'Marvel', sans-serif;
+
+  --gutter: 1rem;
 }
+
 /*** Variables ***/
 
 /*** Header ***/
@@ -31,6 +39,142 @@ html {
 /*** Header ***/
 
 /*** Navigation ***/
+
+.nav {
+  height: 90px;
+  width: 100%;
+  background-color: #01091C;
+  position: sticky;
+}
+
+.nav > .nav-header {
+  display: inline;
+}
+
+.nav > .nav-header > .nav-title {
+  display: inline-block;
+  font-size: 12px;
+  color: transparent;
+  padding: 20px;
+  background-image: url("photos/LogoWhite.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin: 1rem 1rem;
+  
+}
+.nav {
+  position: sticky;
+  top: 0;
+}
+
+.nav > .nav-btn {
+  display: none;
+}
+
+.nav > .nav-links {
+  display: inline;
+  font-size: 18px;
+  margin-left: 5rem;
+}
+
+.nav > .nav-links > a {
+  display: inline-block;
+  padding: 13px 40px;
+  text-decoration: none;
+  color: #efefef;
+}
+
+.nav > .nav-links > a:hover {
+  border-top: var(--color-button) solid 3px;
+  color: var(--color-font-border);
+  opacity: 0.6;
+  transition: 0.4s;
+
+}
+
+.nav > #nav-check {
+  display: none;
+}
+
+
+
+@media (max-width:1024px) {
+
+  .nav {
+    height: 60px;
+    width: 100%;
+    background-color: #01091C;
+    position: sticky;
+    top: 0;
+  }
+
+
+  .nav > .nav-header > .nav-title {
+    display: inline-block;
+    font-size: 12px;
+    color: transparent;
+    padding: 20px;
+    background-image: url("photos/LogoWhite.svg");
+    width: 60px;
+    height: 70px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin: 1rem 1rem;
+    
+  }
+
+  .nav > .nav-links {
+    display: inline;
+    font-size: 18px;
+    margin: 0;
+  }
+
+  .nav > .nav-btn {
+    display: inline-block;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    margin-top: 5px;
+  }
+  .nav > .nav-btn > label {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    padding: 13px;
+  }
+  .nav > .nav-btn > label:hover,.nav  #nav-check:checked ~ .nav-btn > label {
+    background-color: var(--color-button)
+  }
+  .nav > .nav-btn > label > span {
+    display: block;
+    width: 25px;
+    height: 10px;
+    border-top: 2px solid #eee;
+  }
+  .nav > .nav-links {
+    position: absolute;
+    display: block;
+    width: 100%;
+    background-color: #333;
+    height: 0px;
+    transition: all 0.3s ease-in;
+    overflow-y: hidden;
+    top: 60px;
+    left: 0px;
+  }
+  .nav > .nav-links > a {
+    display: block;
+    width: 100%;
+  }
+  .nav > #nav-check:not(:checked) ~ .nav-links {
+    height: 0px;
+  }
+  .nav > #nav-check:checked ~ .nav-links {
+    height: calc(55vh - 50px);
+    overflow-y: auto;
+  }
+}
+
 
 
 /*** Navigation ***/
@@ -38,15 +182,16 @@ html {
 /*** Hero ***/
 
 .hero {
-    height: 100vh;
-    width: 100w;
+  height: 100vh;
+  width: 100vw;
 }
+
 .mainHero {
-    background: url(photos/heroImage.jpeg) no-repeat center center;
-    background-size: cover;
-    display: flex;
-    align-items: flex-start;
-    justify-content: center;
+  background: url(photos/heroImage.jpeg) no-repeat center center;
+  background-size: cover;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
 }
 
 .mainHero__btn {
@@ -54,77 +199,82 @@ html {
 }
 
 .mainHero__title {
-    color: transparent;
-    -webkit-text-stroke: 1px var(--color-font-light);
-    font-family: 'Staatliches', cursive;
-    text-transform: uppercase;
-    margin: 0 5%;
-    text-align: center;
-    font-size: 2rem;
+  color: transparent;
+  -webkit-text-stroke: 1px var(--color-font-light);
+  font-family: 'Staatliches', cursive;
+  text-transform: uppercase;
+  margin: 0 5%;
+  text-align: center;
+  font-size: 2rem;
 }
 
 .mainHero__productName {
-    color: var(--color-font-light);
-    font-family: 'Staatliches', cursive;
-    margin: 0 5%;
-    text-align: center;
-    font-size: 4rem;
+  color: var(--color-font-light);
+  font-family: 'Staatliches', cursive;
+  margin: 0 5%;
+  text-align: center;
+  font-size: 4rem;
 }
 
-  .mainHero__button {
-    background: var(--color-button);
+.mainHero__button {
+  background: var(--color-button);
+  color: var(--color-font-light);
+  font-family: var(--font-header);
+  box-shadow: 5px 0px 20px var(--color-font-border);
+  display: block;
+  max-width: 14rem;
+  margin: 5% auto 15%;
+  font-size: 1.2rem;
+  text-align: center;
+  text-transform: uppercase;
+  padding: .5em 2em;
+  text-decoration: none;
+  animation: text 700ms ease-in-out infinite alternate;
+}
+
+.mainHero__button:hover {
+  box-shadow: 0 0 0;
+}
+
+.shape {
+  transform: skew(-20deg);
+}
+
+.mainHero__buttonText {
+  display: inline-block;
+  transform: skew(20deg);
+}
+
+.mainHero__content {
+  font-size: 1rem;
+}
+
+@keyframes text {
+  from {
     color: var(--color-font-light);
-    font-family: var(--font-header);
-    box-shadow: 5px 0px 20px var(--color-font-border);
-    display: block;
-    max-width: 14rem;
-    margin: 5% auto 15%;
-    font-size: 1.2rem;
-    text-align: center;
-    text-transform: uppercase;
-    padding:.5em 2em;
-    text-decoration: none;
-    animation: text 700ms ease-in-out infinite alternate;
   }
-  
-  .mainHero__button:hover {
-    box-shadow: 0 0 0;
+
+  to {
+    color: transparent;
   }
-  
-  .shape{
-    transform: skew(-20deg);
-  }
-  
-  .mainHero__buttonText{
-    display:inline-block;
-    transform: skew(20deg);
-  }
-  .mainHero__content {
-    margin-top: 10%;
-    font-size: 1rem;
-  }
-  @keyframes text {
-    from {
-      color: var(--color-font-light);
-    }
-    to {
-      color: transparent;
-    }
-  }
-  .mainHero__asidePicture {
-    display: none;
-  }
+}
+
+.mainHero__asidePicture {
+  display: none;
+}
 
 @media (min-width: 992px) {
   .mainHero {
     background: none;
   }
+
   .mainHero__container {
     height: 100vh;
     width: 60%;
     background: url(photos/heroImage.jpeg) no-repeat center center;
     background-size: cover;
   }
+
   .mainHero__content {
     height: 100vh;
     background: #01091C;
@@ -134,17 +284,20 @@ html {
     justify-content: flex-end;
     align-items: flex-end;
   }
+
   .mainHero__title {
     font-size: 4rem;
     text-align: right;
     max-width: 60%;
     -webkit-text-stroke: 1px var(--color-font-border);
   }
+
   .mainHero__productName {
     font-size: 6rem;
     text-align: right;
     margin: 5% 5% 0;
   }
+
   .mainHero__button {
     margin: 5% 10% 10%;
   }
@@ -152,9 +305,10 @@ html {
   .mainHero__btn {
     margin-top: 0;
   }
+
   .mainHero__content {
     margin-top: 0;
-    
+
   }
 
 }
