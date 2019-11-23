@@ -330,7 +330,6 @@ body {
     align-items: center;
     text-align: center;
     color:#041256;
-    padding-bottom: 5rem;
 }
 
 .team__headline {
@@ -338,34 +337,33 @@ body {
 }
 
 .team__headline--header {
-    font-size: 5rem;
+    font-size: 3rem;
     font-family: var(--font-header);
-    margin-top: 3rem;
-    justify-content: space-around
+    margin-top: 1rem;
+    justify-content: space-around;
 }
 
 .team__headline--paragraph {
     font-size: 3rem;
     font-family: var(--font-body);
     line-height: 4rem;
-    padding-top: 2rem;
+    padding-top: 1rem;
 }
 
 .team__gallery {
     display: flex;    
     width: 90%;
-    margin-top: 3rem;
     align-content: center;    
     justify-content: space-around;
-    padding: 0 2rem;
+    margin: 2rem;
 }
 
 .team__member {
     display: flex;
     flex-direction: column;
     position: relative;
-    align-items: flex-end;
-    width: 350px;
+    justify-items: center;
+    width: 300px;
     height: 300px;
     transition: .6s ease-out;
     box-shadow: 0 10px 10px rgba(0, 0, 0, 0.5);
@@ -409,6 +407,9 @@ body {
 }
 
 .team__text {
+    align-self: stretch;
+    text-align: center;
+    justify-content: center;
     position: relative;
     z-index: 3;
     opacity: 0;
@@ -420,7 +421,7 @@ body {
 .team__text h4 {
     text-align: center;
     margin: 0;
-    padding: 1rem;
+    padding: 0.2rem;
     font-size: 2rem;
     font-weight: 800;
     font-family: var(--font-body);
@@ -429,7 +430,7 @@ body {
 
 .team__text p {
     margin: 0.5rem;
-    padding: 1rem;
+    padding: 0.2rem;
     font-size: 1rem;
     font-weight: 800;
     font-family: var(--font-body);
@@ -446,9 +447,7 @@ body {
 
 .team__text a i {
     color: #E9E9EC;
-    border: 1px solid;
-    border-radius: 50%;
-    padding: 6px 8px;
+    align-self: center; 
 }
 
 /*** Team ***/
@@ -479,15 +478,29 @@ body {
         justify-content: center;
         align-content: center;
         width: 90%;
-        margin-top: 1rem;
+        margin: 0;
     }
 
     .team__member {
         height: 200px;
-        margin-top: 1rem;
+        width: 300px;
+        margin-top: 2rem;
         position: relative;
         align-items: flex-end;
-        width: auto;
+        transition: none;
+    }
+
+    .team__member:hover {
+        transform: none; 
+    }
+    
+      
+    .team__member:hover .team__text {
+        transform: none;
+    }
+    
+    .team__member:before {
+        transition: none;
     }
 
     .team__text h4 {
