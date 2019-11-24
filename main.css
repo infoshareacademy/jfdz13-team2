@@ -11,9 +11,7 @@ html {
   scroll-behavior: smooth;
 }
 
-body {
-  
-}
+
 
 /*** All ***/
 
@@ -72,6 +70,7 @@ body {
 .nav {
   position: sticky;
   top: 0;
+  z-index: 999;
 }
 
 .nav > .nav-btn {
@@ -188,21 +187,14 @@ body {
 
 /*** Hero ***/
 
-.hero {
-  height: 100vh;
-  width: 100vw;
-}
-
 .mainHero {
   background: url(photos/heroImage.jpeg) no-repeat center center;
   background-size: cover;
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   justify-content: center;
-}
-
-.mainHero__btn {
-  margin-top: 9rem;
+  height: 100vh;
+  width: 100%;
 }
 
 .mainHero__title {
@@ -218,7 +210,7 @@ body {
 .mainHero__productName {
   color: var(--color-font-light);
   font-family: 'Staatliches', cursive;
-  margin: 0 5%;
+  margin: 9rem 5% 0;
   text-align: center;
   font-size: 4rem;
 }
@@ -288,7 +280,7 @@ body {
     width: 40%;
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
+    justify-content: center;
     align-items: flex-end;
   }
 
@@ -306,11 +298,12 @@ body {
   }
 
   .mainHero__button {
-    margin: 5% 10% 10%;
+    margin: 5% 5% 10% 0;
+    width: 25rem;
   }
 
   .mainHero__btn {
-    margin-top: 0;
+    margin: 0 5%;
   }
 
   .mainHero__content {
