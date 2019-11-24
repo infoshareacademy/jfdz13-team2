@@ -322,13 +322,14 @@ html {
 /*** Team ***/
 
 .team__container {
-    height: 900px;
-    background-color: #E9E9EC;
+    height: 100%;
+    background-color: #01091C;
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
-    color:#041256;
+    color:#E9E9EC;
+    padding-bottom: 50px ;
 }
 
 .team__headline {
@@ -343,10 +344,11 @@ html {
 }
 
 .team__headline--paragraph {
-    font-size: 3rem;
-    font-family: var(--font-body);
+    font-size: 2rem;
+    font-family: var(--font-header);
     line-height: 4rem;
     padding-top: 1rem;
+    letter-spacing: 0.1rem;
 }
 
 .team__gallery {
@@ -354,22 +356,18 @@ html {
     width: 90%;
     align-content: center;    
     justify-content: space-around;
-    margin: 2rem;
+    margin: 0 auto;
 }
 
 .team__member {
     display: flex;
-    flex-direction: column;
     position: relative;
     justify-items: center;
     width: 300px;
     height: 300px;
     transition: .6s ease-out;
     box-shadow: 0 10px 10px rgba(0, 0, 0, 0.5);
-}
-
-.team__member:hover {
-    transform: translateY(1rem); 
+    margin: 2rem auto 0;
 }
 
 .team__member :hover :before {
@@ -406,19 +404,20 @@ html {
 }
 
 .team__text {
-    align-self: stretch;
-    text-align: center;
-    justify-content: center;
-    position: relative;
+    width: 100%;
+    position: absolute;
+    display: block;
+    align-content: center;
+    bottom: 5%;
     z-index: 3;
     opacity: 0;
     transform: translateY(3rem);
     transition: 0.5s;
     color: #E9E9EC;
+    margin: 0 auto;
 }
 
 .team__text h4 {
-    text-align: center;
     margin: 0;
     padding: 0.2rem;
     font-size: 2rem;
@@ -437,9 +436,7 @@ html {
 }
 
 .team__text a {
-    text-align: center;
     color: #E9E9EC;
-    display: inline-block;
     margin: 0 5px;
     text-decoration: none;
 }
@@ -450,6 +447,12 @@ html {
 }
 
 /*** Team ***/
+
+@media only screen and (min-width: 992px) {
+  .team__member:hover {
+    transform: translateY(1rem); 
+  }
+}
 
 @media only screen and (max-width: 992px) {
     .team__container {
@@ -467,7 +470,7 @@ html {
     }
 
     .team__headline--paragraph {
-        font-size: 1.5rem;
+        font-size: 0.8rem;
         line-height: 2rem;
         padding-top: 1rem;
     }
@@ -476,25 +479,25 @@ html {
         flex-direction: column;
         justify-content: center;
         align-content: center;
-        width: 90%;
+        width: 100%;
         margin: 0;
     }
 
     .team__member {
         height: 200px;
         width: 300px;
-        margin-top: 2rem;
+        margin: 2rem auto 0;
         position: relative;
         align-items: flex-end;
         transition: none;
+        transform: translateY(0rem); 
     }
 
-    .team__member:hover {
+    .team__member {
         transform: none; 
     }
-    
-      
-    .team__member:hover .team__text {
+         
+    .team__member.team__text {
         transform: none;
     }
     
@@ -502,10 +505,18 @@ html {
         transition: none;
     }
 
+    .team__text {
+      transform: translateY(0rem); 
+      opacity: 1;
+    }
+
     .team__text h4 {
         width: 100%;
         font-size: 1.5rem;
         font-weight: 600;
+    }
+    .team__text p {
+      margin: 0;
     }
 }
 
