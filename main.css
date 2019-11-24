@@ -26,15 +26,8 @@ html {
 
   --font-header: 'Coda Caption', sans-serif;
   --font-body: 'Marvel', sans-serif;
-
-<<<<<<< HEAD
-    --font-header: 'Coda Caption', sans-serif;
-    --font-body: 'Marvel', sans-serif;
-
-    --gutter: 1rem;
-=======
+  
   --gutter: 1rem;
->>>>>>> master
 }
 
 /*** Variables ***/
@@ -452,13 +445,12 @@ html {
 
 /*** Team ***/
 
-<<<<<<< HEAD
 /*** For ***/
 
 .mainForm {
     display: flex;
     flex-direction: column;
-    height: 100vh;
+    height: 90vh;
     width: 100%;
     justify-content: space-around;
     background-color: var(--color-primary);
@@ -529,8 +521,6 @@ html {
     }
 }
 
-@media ()
-=======
 @media only screen and (max-width: 992px) {
     .team__container {
         height: 100%;
@@ -590,7 +580,6 @@ html {
 }
 
 /*** Form ***/
->>>>>>> master
 
 /*** Form ***/
 
