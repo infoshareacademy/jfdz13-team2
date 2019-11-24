@@ -26,7 +26,7 @@ html {
 
   --font-header: 'Coda Caption', sans-serif;
   --font-body: 'Marvel', sans-serif;
-
+  
   --gutter: 1rem;
 }
 
@@ -72,8 +72,9 @@ html {
 
 .nav > .nav-links {
   display: inline;
-  font-size: 18px;
+  font-size: 15px;
   margin-left: 5rem;
+  font-family: var(--font-header)
 }
 
 .nav > .nav-links > a {
@@ -169,7 +170,7 @@ html {
     height: 0px;
   }
   .nav > #nav-check:checked ~ .nav-links {
-    height: calc(55vh - 50px);
+    height: calc(60vh - 50px);
     overflow-y: auto;
   }
 }
@@ -180,21 +181,14 @@ html {
 
 /*** Hero ***/
 
-.hero {
-  height: 100vh;
-  width: 100vw;
-}
-
 .mainHero {
   background: url(photos/heroImage.jpeg) no-repeat center center;
   background-size: cover;
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   justify-content: center;
-}
-
-.mainHero__btn {
-  margin-top: 9rem;
+  height: 100vh;
+  width: 100%;
 }
 
 .mainHero__title {
@@ -210,7 +204,7 @@ html {
 .mainHero__productName {
   color: var(--color-font-light);
   font-family: 'Staatliches', cursive;
-  margin: 0 5%;
+  margin: 9rem 5% 0;
   text-align: center;
   font-size: 4rem;
 }
@@ -280,7 +274,7 @@ html {
     width: 40%;
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
+    justify-content: center;
     align-items: flex-end;
   }
 
@@ -298,11 +292,12 @@ html {
   }
 
   .mainHero__button {
-    margin: 5% 10% 10%;
+    margin: 5% 5% 10% 0;
+    width: 25rem;
   }
 
   .mainHero__btn {
-    margin-top: 0;
+    margin: 0 5%;
   }
 
   .mainHero__content {
@@ -451,7 +446,83 @@ html {
 @media only screen and (min-width: 992px) {
   .team__member:hover {
     transform: translateY(1rem); 
+  } 
+}
+  
+  /*** For ***/
+
+.mainForm {
+    display: flex;
+    flex-direction: column;
+    height: 90vh;
+    width: 100%;
+    justify-content: space-around;
+    background-color: var(--color-primary);
+    
+}
+
+.mainForm_header {
+    font-family: var(--font-header);
+    -webkit-text-stroke: 1px var(--color-font-border);
+    color :var(--color-font-light);
+    margin-bottom: var(--gutter);
+    text-align: center;
+    font-size: 2.5rem;
+}
+
+.contactForm {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 50%;
+    margin: 0 auto;
+    margin-bottom: var(--gutter);
+}
+
+
+.contactForm_input {
+    height: 3rem;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.contactForm_message {
+    height: 100px;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.contactForm_input::placeholder {
+    font-family: var(--font-body);
+}
+
+.contactForm_message::placeholder {
+    font-family: var(--font-body);
+}
+
+.buttonArea {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.formButton {
+    background-color: var(--color-button);
+    border: none;
+    color: var(--color-font-light);
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 32px;
+    max-width: 50%;
+    border-radius: 12px;
   }
+
+@media (max-width: 1024px) {
+    .contactForm {
+        width: 70%;
+    }
 }
 
 @media only screen and (max-width: 992px) {

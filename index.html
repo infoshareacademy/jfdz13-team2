@@ -34,9 +34,9 @@
                 <div class="nav-links">
                   <a href="#">Home</a>
                   <a href="#">About Us</a>
-                  <a href="#">Team</a>
-                  <a href="#">Ouer App</a>
-                  <a href="#">Contac Us</a>
+                  <a href="#team">Team</a>
+                  <a href="#">Our App</a>
+                  <a href="#">Contact Us</a>
                 </div>
                 
               </div>
@@ -137,10 +137,20 @@
         </div>
     </section>
 
-    <section class="mainForm">
+
+
+    <section class="mainForm" id="form">
         <!--Maciek-->
-
-
+        <h1 class="mainForm_header">Contact us!</h1>
+        <form class="contactForm" action="">
+            <input class="contactForm_input" placeholder="First name" type="text">
+            <input class="contactForm_input" placeholder="Last name" type="text">
+            <input class="contactForm_input" placeholder="Email address" type="email">
+            <textarea class="contactForm_message" placeholder="Message"></textarea>
+        </form>
+        <div class="buttonArea">
+            <input class="formButton" type="submit"></input>
+        </div>
     </section>
 
     <footer class="mainFooter">
