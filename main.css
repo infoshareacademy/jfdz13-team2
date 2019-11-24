@@ -54,9 +54,11 @@ html {
 .mainForm {
     display: flex;
     flex-direction: column;
+    height: 100vh;
     width: 100%;
     justify-content: space-around;
     background-color: var(--color-primary);
+    
 }
 
 .mainForm_header {
@@ -65,6 +67,7 @@ html {
     color :var(--color-font-light);
     margin-bottom: var(--gutter);
     text-align: center;
+    font-size: 2.5rem;
 }
 
 .contactForm {
@@ -98,11 +101,31 @@ html {
     font-family: var(--font-body);
 }
 
+.buttonArea {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.formButton {
+    background-color: var(--color-button);
+    border: none;
+    color: var(--color-font-light);
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 32px;
+    max-width: 50%;
+    border-radius: 12px;
+  }
+
 @media (max-width: 1024px) {
     .contactForm {
         width: 70%;
     }
 }
+
+@media ()
 
 /*** Form ***/
 
