@@ -201,12 +201,8 @@ html {
   font-size: 2rem;
 }
 
-.mainHero__productName {
-  color: var(--color-font-light);
-  font-family: 'Staatliches', cursive;
-  margin: 9rem 5% 0;
-  text-align: center;
-  font-size: 4rem;
+.mainHero__logo {
+  margin: 9rem 5% 5%;
 }
 
 .mainHero__button {
@@ -256,10 +252,7 @@ html {
   display: none;
 }
 
-@media (min-width: 992px) {
-  .mainHero {
-    background: none;
-  }
+@media (min-width: 1024px) {
 
   .mainHero__container {
     height: 100vh;
@@ -285,10 +278,9 @@ html {
     -webkit-text-stroke: 1px var(--color-font-border);
   }
 
-  .mainHero__productName {
-    font-size: 6rem;
-    text-align: right;
-    margin: 5% 5% 0;
+  .mainHero__logo {
+    margin: 5%;
+    max-width: 50%;
   }
 
   .mainHero__button {
