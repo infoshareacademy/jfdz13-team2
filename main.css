@@ -355,8 +355,8 @@ html {
     display: flex;
     position: relative;
     justify-items: center;
-    width: 300px;
-    height: 300px;
+    width: 25vw;
+    height: 25vw;
     transition: .6s ease-out;
     box-shadow: 0 10px 10px rgba(0, 0, 0, 0.5);
     margin: 2rem auto 0;
@@ -406,6 +406,8 @@ html {
     transform: translateY(3rem);
     transition: 0.5s;
     color: #E9E9EC;
+    background-color: #1345E4;
+    opacity: 0.1;
     margin: 0 auto;
 }
 
@@ -436,14 +438,98 @@ html {
 .team__text a i {
     color: #E9E9EC;
     align-self: center; 
+    z-index: 4;
 }
 
-/*** Team ***/
+.team__member--logo h2{
+    
+    background-position: cover;
+    background-repeat: no-repeat;
+    background-image: url("photos/LogoWhite.svg");
+    color: transparent;
+    width: 25vw;
+    height: 25vw;
+    margin: 35% auto;
+}
 
-@media only screen and (min-width: 992px) {
+/*** Team media ***/
+
+@media only screen and (min-width: 1024px) {
   .team__member:hover {
     transform: translateY(1rem); 
   } 
+}
+
+@media only screen and (max-width: 1024px) {
+  .team__container {
+      height: 100%;
+      padding-bottom: 2rem;
+  }
+  
+  .team__headline {
+      width: 100%;
+  }
+
+  .team__headline--header {
+      font-size: 2rem;
+      margin-top: 20px;
+  }
+
+  .team__headline--paragraph {
+      font-size: 0.8rem;
+      line-height: 2rem;
+      padding-top: 1rem;
+  }
+
+  .team__gallery {
+      flex-direction: column;
+      justify-content: center;
+      align-content: center;
+      width: 100%;
+      margin: 0;
+  }
+
+  .team__member {
+      height: 50vh;
+      width: 50vh;
+      margin: 2rem auto 0;
+      position: relative;
+      align-items: flex-end;
+      transition: none;
+      transform: translateY(0rem); 
+  }
+
+  .team__member {
+      transform: none; 
+  }
+       
+  .team__member.team__text {
+      transform: none;
+  }
+  
+  .team__member:before {
+      transition: none;
+      opacity: 0;
+  }
+
+  .team__text {
+    transform: translateY(0rem); 
+    opacity: 1;
+  }
+
+  .team__text h4 {
+      width: 100%;
+      font-size: 1.5rem;
+      font-weight: 600;
+  }
+  .team__text p {
+    margin: 0;
+  }
+  .team__member--logo h2{
+    
+    display: none;
+}
+
 }
   
   /*** For ***/
@@ -455,8 +541,7 @@ html {
     width: 100%;
     justify-content: space-around;
     background-color: var(--color-primary);
-    
-}
+} 
 
 .mainForm_header {
     font-family: var(--font-header);
@@ -476,7 +561,6 @@ html {
     margin: 0 auto;
     margin-bottom: var(--gutter);
 }
-
 
 .contactForm_input {
     height: 3rem;
@@ -522,71 +606,6 @@ html {
     }
 }
 
-@media only screen and (max-width: 992px) {
-    .team__container {
-        height: 100%;
-        padding-bottom: 2rem;
-    }
-    
-    .team__headline {
-        width: 100%;
-    }
-
-    .team__headline--header {
-        font-size: 2rem;
-        margin-top: 20px;
-    }
-
-    .team__headline--paragraph {
-        font-size: 0.8rem;
-        line-height: 2rem;
-        padding-top: 1rem;
-    }
-
-    .team__gallery {
-        flex-direction: column;
-        justify-content: center;
-        align-content: center;
-        width: 100%;
-        margin: 0;
-    }
-
-    .team__member {
-        height: 200px;
-        width: 300px;
-        margin: 2rem auto 0;
-        position: relative;
-        align-items: flex-end;
-        transition: none;
-        transform: translateY(0rem); 
-    }
-
-    .team__member {
-        transform: none; 
-    }
-         
-    .team__member.team__text {
-        transform: none;
-    }
-    
-    .team__member:before {
-        transition: none;
-    }
-
-    .team__text {
-      transform: translateY(0rem); 
-      opacity: 1;
-    }
-
-    .team__text h4 {
-        width: 100%;
-        font-size: 1.5rem;
-        font-weight: 600;
-    }
-    .team__text p {
-      margin: 0;
-    }
-}
 
 /*** Form ***/
 
