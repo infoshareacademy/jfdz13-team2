@@ -139,20 +139,35 @@
 
 
 
-    <section class="mainForm" id="form">
-        <!--Maciek-->
+    <!--<section class="mainForm" id="form"> -->
+        <!-- Maciek
         <h1 class="mainForm_header">Contact us!</h1>
-        <form class="contactForm" action="">
+        <form class="contactForm" action="" id="contactForm">
             <input class="contactForm_input" placeholder="First name" type="text">
             <input class="contactForm_input" placeholder="Last name" type="text">
             <input class="contactForm_input" placeholder="Email address" type="email">
             <textarea class="contactForm_message" placeholder="Message"></textarea>
         </form>
         <div class="buttonArea">
-            <input class="formButton" type="submit"></input>
+            <button class="formButton" form="contactForm">Submit</button>
         </div>
-    </section>
+    </section> -->
 
+    <section class="wrapper" id="form">
+        <div class="contact-form">
+          <div class="input-fields">
+            <input type="text" class="input" placeholder="Name">
+            <input type="text" class="input" placeholder="Email Address">
+            <input type="text" class="input" placeholder="Phone">
+            <input type="text" class="input" placeholder="Subject">
+          </div>
+          <div class="msg">
+            <textarea placeholder="Message"></textarea>
+            <div class="btn">send</div>
+          </div>
+        </div>	
+    </section>
+         
     <footer class="mainFooter">
 
 
