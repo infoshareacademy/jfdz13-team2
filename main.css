@@ -211,10 +211,10 @@ html {
 }
 
 .mainHero__button {
-  background: var(--color-button);
+  background: var(--color-light);
   color: var(--color-font-light);
   font-family: var(--font-header);
-  box-shadow: 5px 0px 20px var(--color-font-border);
+  box-shadow: 5px 0px 20px var(--color-dark);
   display: block;
   max-width: 14rem;
   margin: 5% auto 15%;
@@ -280,7 +280,7 @@ html {
     font-size: 4rem;
     text-align: right;
     max-width: 60%;
-    -webkit-text-stroke: 1px var(--color-font-border);
+    -webkit-text-stroke: 1px var(--color-light);
   }
 
   .mainHero__logo {
