@@ -15,36 +15,36 @@
 </head>
 
 <body>
-    
-        <nav class="nav">
-                <input type="checkbox" id="nav-check">
-                <div class="nav-header">
-                  <div class="nav-title">
-                    <h1>Move On</h1>
-                  </div>
-                </div>
-                <div class="nav-btn">
-                  <label for="nav-check">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                  </label>
-                </div>
-                
-                <div class="nav-links">
-                  <a href="#">Home</a>
-                  <a href="#">About Us</a>
-                  <a href="#team">Team</a>
-                  <a href="#">Our App</a>
-                  <a href="#">Contact Us</a>
-                </div>
-                
-              </div>
-        
-            </nav>
+
+    <nav class="nav">
+        <input type="checkbox" id="nav-check">
+        <div class="nav-header">
+            <div class="nav-title">
+                <h1>Move On</h1>
+            </div>
+        </div>
+        <div class="nav-btn">
+            <label for="nav-check">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+        </div>
+
+        <div class="nav-links">
+            <a href="#">Home</a>
+            <a href="#">About Us</a>
+            <a href="#team">Team</a>
+            <a href="#">Our App</a>
+            <a href="#">Contact Us</a>
+        </div>
+
+        </div>
+
+    </nav>
     <section id="hero" class="hero">
         <div class="mainHero">
-            
+
             <div class="mainHero__content">
                 <h2 class="mainHero__title">Plan your work out</h2>
                 <h2 class="mainHero__title">Then work your plan</h2>
@@ -68,7 +68,8 @@
     </section>
 
 
-    <section class="team__container" id="team"><!--Kasia-->
+    <section class="team__container" id="team">
+        <!--Kasia-->
         <div class="team__headline">
             <h2 class="team__headline--header">Meet Our Team</h2>
             <p class="team__headline--paragraph">
@@ -78,7 +79,18 @@
         </div>
         <div class="team__gallery">
             <div class="team__member">
-                <img src="photos/me.jpg" alt="Kamil">
+                <img src="photos/Aga_900x900_2.jpg" alt="Aga">
+                <div class="team__text">
+                    <h4>Aga</h4>
+                    <p><a href="">View more</a></p>
+                    <p>
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </p>
+                </div>
+            </div>
+            <div class="team__member">
+                <img src="photos/Kamil_900x900_2.jpg" alt="Kamil">
                 <div class="team__text">
                     <h4>Kamil</h4>
                     <p><a href="">View more</a></p>
@@ -89,28 +101,17 @@
                 </div>
             </div>
             <div class="team__member">
-                <img src="photos/me.jpg" alt="Krzysiek">
-                    <div class="team__text">
-                        <h4>Krzysiek</h4>
-                        <p><a href="">View more</a></p>
-                        <p>
-                            <a href="#"><i class="fab fa-facebook-f"></i></a>
-                            <a href="#"><i class="fab fa-instagram"></i></a>
-                        </p>
-                    </div>
+                <img src="photos/Krzysiek_900x900_2.jpg" alt="Krzysiek">
+                <div class="team__text">
+                    <h4>Krzysiek</h4>
+                    <p><a href="">View more</a></p>
+                    <p>
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </p>
+                </div>
             </div>
-            <div class="team__member">
-                <img src="photos/me.jpg" alt="Aga">
-                    <div class="team__text">
-                        <h4>Agnieszka</h4>
-                        <p><a href="">View more</a></p>
-                        <p>
-                            <a href="#"><i class="fab fa-facebook-f"></i></a>
-                            <a href="#"><i class="fab fa-instagram"></i></a>
-                            </p>
-                        </div>
-                    </div>
-            </div>
+        </div>
         <div class="team__gallery">
             <div class="team__member">
                 <img src="photos/me.jpg" alt="Kasia">
@@ -124,50 +125,37 @@
                 </div>
             </div>
             <div class="team__member">
-                <img src="photos/me.jpg" alt="Krzysiek">
-                    <div class="team__text">
-                        <h4>Maciej</h4>
-                        <p><a href="">View more</a></p>
-                        <p>
-                            <a href="#"><i class="fab fa-facebook-f"></i></a>
-                            <a href="#"><i class="fab fa-instagram"></i></a>
-                        </p>
-                    </div>
+                <img src="photos/Maciek_900x900_2.jpg" alt="Maciek">
+                <div class="team__text">
+                    <h4>Maciek</h4>
+                    <p><a href="">View more</a></p>
+                    <p>
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </p>
+                </div>
             </div>
         </div>
     </section>
 
 
-
-    <!--<section class="mainForm" id="form"> -->
-        <!-- Maciek
-        <h1 class="mainForm_header">Contact us!</h1>
-        <form class="contactForm" action="" id="contactForm">
-            <input class="contactForm_input" placeholder="First name" type="text">
-            <input class="contactForm_input" placeholder="Last name" type="text">
-            <input class="contactForm_input" placeholder="Email address" type="email">
-            <textarea class="contactForm_message" placeholder="Message"></textarea>
-        </form>
-        <div class="buttonArea">
-            <button class="formButton" form="contactForm">Submit</button>
+    <section class="mainForm" id="form">
+        <h1 class="formHeader">Contact us</h1>
+        <div class="wrapper">
+            <div class="contact-form">
+                <div class="input-fields">
+                    <input type="text" class="input" placeholder="Name">
+                    <input type="email" class="input" placeholder="Email Address">
+                    <input type="text" class="input" placeholder="Subject">
+                </div>
+                <div class="msg">
+                    <textarea placeholder="Message"></textarea>
+                    <div class="btn">send</div>
+                </div>
+            </div>
         </div>
-    </section> -->
-
-    <section class="wrapper" id="form">
-        <div class="contact-form">
-          <div class="input-fields">
-            <input type="text" class="input" placeholder="Name">
-            <input type="text" class="input" placeholder="Email Address">
-            <input type="text" class="input" placeholder="Phone">
-            <input type="text" class="input" placeholder="Subject">
-          </div>
-          <div class="msg">
-            <textarea placeholder="Message"></textarea>
-            <div class="btn">send</div>
-          </div>
-        </div>	
     </section>
-         
+
     <footer class="mainFooter">
 
 

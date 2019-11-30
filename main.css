@@ -51,14 +51,19 @@ html {
 
 .nav > .nav-header > .nav-title {
   display: inline-block;
-  font-size: 12px;
-  color: transparent;
   padding: 20px;
   background-image: url("photos/LogoWhite.svg");
   background-size: contain;
   background-repeat: no-repeat;
   margin: 1rem 1rem;
   
+}
+
+.nav > .nav-header > .nav-title a {
+  color: transparent;
+  text-decoration: none;
+  font-size: 15px;
+  text-align: center;
 }
 .nav {
   position: sticky;
@@ -201,12 +206,8 @@ html {
   font-size: 2rem;
 }
 
-.mainHero__productName {
-  color: var(--color-font-light);
-  font-family: 'Staatliches', cursive;
-  margin: 9rem 5% 0;
-  text-align: center;
-  font-size: 4rem;
+.mainHero__logo {
+  margin: 9rem 5% 5%;
 }
 
 .mainHero__button {
@@ -256,10 +257,7 @@ html {
   display: none;
 }
 
-@media (min-width: 992px) {
-  .mainHero {
-    background: none;
-  }
+@media (min-width: 1024px) {
 
   .mainHero__container {
     height: 100vh;
@@ -285,10 +283,9 @@ html {
     -webkit-text-stroke: 1px var(--color-font-border);
   }
 
-  .mainHero__productName {
-    font-size: 6rem;
-    text-align: right;
-    margin: 5% 5% 0;
+  .mainHero__logo {
+    margin: 5%;
+    max-width: 50%;
   }
 
   .mainHero__button {
@@ -358,8 +355,8 @@ html {
     display: flex;
     position: relative;
     justify-items: center;
-    width: 300px;
-    height: 300px;
+    width: 25vw;
+    height: 25vw;
     transition: .6s ease-out;
     box-shadow: 0 10px 10px rgba(0, 0, 0, 0.5);
     margin: 2rem auto 0;
@@ -409,6 +406,8 @@ html {
     transform: translateY(3rem);
     transition: 0.5s;
     color: #E9E9EC;
+    background-color: #1345E4;
+    opacity: 0.1;
     margin: 0 auto;
 }
 
@@ -439,172 +438,126 @@ html {
 .team__text a i {
     color: #E9E9EC;
     align-self: center; 
+    z-index: 4;
 }
 
-/*** Team ***/
+.team__member--logo h2{
+    
+    background-position: cover;
+    background-repeat: no-repeat;
+    background-image: url("photos/LogoWhite.svg");
+    color: transparent;
+    width: 25vw;
+    height: 25vw;
+    margin: 35% auto;
+}
 
-@media only screen and (min-width: 992px) {
+/*** Team media ***/
+
+@media only screen and (min-width: 1024px) {
   .team__member:hover {
     transform: translateY(1rem); 
   } 
 }
+
+@media only screen and (max-width: 1024px) {
+  .team__container {
+      height: 100%;
+      padding-bottom: 2rem;
+  }
   
-  /*** For ***/
-
-/* .mainForm {
-    display: flex;
-    flex-direction: column;
-    height: 90vh;
-    width: 100%;
-    justify-content: space-around;
-    background-color: #01091C;
-    
-}
-
-.mainForm_header {
-    font-family: var(--font-header);
-    -webkit-text-stroke: 1px var(--color-font-border);
-    color :var(--color-font-light);
-    margin-bottom: var(--gutter);
-    text-align: center;
-    font-size: 2.5rem;
-}
-
-.contactForm {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 50%;
-    margin: 0 auto;
-    margin-bottom: var(--gutter);
-}
-
-
-.contactForm_input {
-    height: 3rem;
-    width: 100%;
-    margin-top: 10px;
-}
-
-.contactForm_message {
-    height: 100px;
-    width: 100%;
-    margin-top: 10px;
-}
-
-.contactForm_input::placeholder {
-    font-family: var(--font-body);
-}
-
-.contactForm_message::placeholder {
-    font-family: var(--font-body);
-}
-
-.buttonArea {
-    display: flex;
-    justify-content: center;
-    align-content: center;
-}
-
-.formButton {
-    font-family: var(--font-header);
-    background-color: var(--color-button);
-    border: none;
-    color: var(--color-font-light);
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    font-size: 32px;
-    max-width: 50%;
-    transform: skew(-20deg);
+  .team__headline {
+      width: 100%;
   }
 
-@media (max-width: 1024px) {
-    .contactForm {
-        width: 70%;
-    }
+  .team__headline--header {
+      font-size: 2rem;
+      margin-top: 20px;
+  }
 
-    .formButton {
-      font-size: 16px;
-    }
-} */
+  .team__headline--paragraph {
+      font-size: 0.8rem;
+      line-height: 2rem;
+      padding-top: 1rem;
+  }
 
-@media only screen and (max-width: 992px) {
-    .team__container {
-        height: 100%;
-        padding-bottom: 2rem;
-    }
-    
-    .team__headline {
-        width: 100%;
-    }
-
-    .team__headline--header {
-        font-size: 2rem;
-        margin-top: 20px;
-    }
-
-    .team__headline--paragraph {
-        font-size: 0.8rem;
-        line-height: 2rem;
-        padding-top: 1rem;
-    }
-
-    .team__gallery {
-        flex-direction: column;
-        justify-content: center;
-        align-content: center;
-        width: 100%;
-        margin: 0;
-    }
-
-    .team__member {
-        height: 200px;
-        width: 300px;
-        margin: 2rem auto 0;
-        position: relative;
-        align-items: flex-end;
-        transition: none;
-        transform: translateY(0rem); 
-    }
-
-    .team__member {
-        transform: none; 
-    }
-         
-    .team__member.team__text {
-        transform: none;
-    }
-    
-    .team__member:before {
-        transition: none;
-    }
-
-    .team__text {
-      transform: translateY(0rem); 
-      opacity: 1;
-    }
-
-    .team__text h4 {
-        width: 100%;
-        font-size: 1.5rem;
-        font-weight: 600;
-    }
-    .team__text p {
+  .team__gallery {
+      flex-direction: column;
+      justify-content: center;
+      align-content: center;
+      width: 100%;
       margin: 0;
-    }
+  }
+
+  .team__member {
+      height: 50vh;
+      width: 50vh;
+      margin: 2rem auto 0;
+      position: relative;
+      align-items: flex-end;
+      transition: none;
+      transform: translateY(0rem); 
+  }
+
+  .team__member {
+      transform: none; 
+  }
+       
+  .team__member.team__text {
+      transform: none;
+  }
+  
+  .team__member:before {
+      transition: none;
+      opacity: 0;
+  }
+
+  .team__text {
+    transform: translateY(0rem); 
+    opacity: 1;
+  }
+
+  .team__text h4 {
+      width: 100%;
+      font-size: 1.5rem;
+      font-weight: 600;
+  }
+  .team__text p {
+    margin: 0;
+  }
+  .team__member--logo h2{
+    
+    display: none;
 }
 
+}
+  
+ 
 /*** Form ***/
 
-@import url('https://fonts.googleapis.com/css?family=Roboto');
+.mainForm {
+  display: flex;
+  background: url(photos/person-swimming-on-body-of-water-863988.jpg) no-repeat top center;
+  background-size: cover;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.formHeader {
+  font-family: var(--font-header);
+  color: var(--color-font-light);
+  -webkit-text-stroke: 1px #39b7dd;
+  font-size: 3rem;  
+}
 
  
-.wrapper{
+.wrapper {
+  display: flex;
   position: relative;
-  top: 50%;
-  transform: translateY(-50%);
+  top: 30%;
+  transform: translateY(-90%);
   width: 100%;
   padding: 0 20px;
 }
@@ -642,7 +595,15 @@ html {
 }
  
 .msg textarea{
-  height: 212px;
+  height: 151px;
+}
+
+.input::placeholder {
+  font-family: var(--font-body);
+}
+
+.msg textarea::placeholder {
+  font-family: var(--font-body);
 }
  
 ::-webkit-input-placeholder {
@@ -663,23 +624,45 @@ html {
     text-align: center;
     padding: 15px;
     border-radius: 5px;
-    color: #fff;
+    color: var(--color-font-light);
+    font-family: var(--font-header);
     cursor: pointer;
     text-transform: uppercase;
 }
  
-@media screen and (max-width: 600px){
+@media screen and (max-width: 600px) {
+
+  .mainForm {
+    height: 100vh;
+  }
+
+  .wrapper {
+    margin-top: 20px;
+    transform: translateY(-50%);
+  }
+
   .contact-form{
     flex-direction: column;
+    margin-top: 10px;
   }
   .msg textarea{
-    height: 80px;
+    height: 70px;
   }
   .input-fields,
   .msg{
     width: 100%;
   }
-};
+}
+
+@media screen and (max-height: 540px) {
+
+  .mainForm {
+    height: 150vh;
+  }
+  .wrapper {
+    transform: translateY(-40%);
+  }
+}
 
 /*** Form ***/
 
