@@ -90,7 +90,7 @@ html {
 }
 
 .nav > .nav-links > a:hover {
-  border-top: var(--color-button) solid 3px;
+  border-top: var(--color-light) solid 3px;
   color: var(--color-font-border);
   opacity: 0.6;
   transition: 0.4s;
