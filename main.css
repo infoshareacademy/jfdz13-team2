@@ -599,12 +599,28 @@ html {
   height: 151px;
 }
 
+.msg textarea::placeholder {
+  font-family: var(--font-body);
+}
+
+.msg textarea:focus {
+  outline: none;
+}
+
+.msg textarea:focus::placeholder {
+  font-weight: bold;
+}
+
 .input::placeholder {
   font-family: var(--font-body);
 }
 
-.msg textarea::placeholder {
-  font-family: var(--font-body);
+.input:focus {
+	outline: none;
+}
+
+.input:focus::placeholder {
+	font-weight: bold;
 }
  
 ::-webkit-input-placeholder {
