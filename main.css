@@ -570,6 +570,7 @@ html {
   padding: 30px;
   border-radius: 5px;
   box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  width: 60%;
 }
  
 .input-fields{
@@ -580,7 +581,7 @@ html {
  
 .input-fields,
 .msg{
-  width: 48%;
+  width: 90%;
 }
  
 .input-fields .input,
@@ -629,11 +630,26 @@ html {
     cursor: pointer;
     text-transform: uppercase;
 }
+
+.gdpr {
+  display: flex;
+  /* justify-content: space-between; */
+  flex-direction: column;
+  margin-top: 7px;
+  
+}
+
+.gdpr__label {
+  color: var(--color-font-light);
+  font-family: var(--font-body);
+  font-size: 1rem;
+}
+
  
 @media screen and (max-width: 600px) {
 
   .mainForm {
-    height: 100vh;
+    height: 150vh;
   }
 
   .wrapper {
@@ -644,6 +660,7 @@ html {
   .contact-form{
     flex-direction: column;
     margin-top: 10px;
+    width: 90%;
   }
   .msg textarea{
     height: 70px;
@@ -657,7 +674,7 @@ html {
 @media screen and (max-height: 540px) {
 
   .mainForm {
-    height: 150vh;
+    height: 170vh;
   }
   .wrapper {
     transform: translateY(-40%);
