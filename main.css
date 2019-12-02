@@ -321,7 +321,7 @@ html {
     align-items: center;
     text-align: center;
     color:#E9E9EC;
-    padding-bottom: 50px ;
+    padding-bottom: 2rem;
 }
 
 .team__headline {
@@ -331,7 +331,7 @@ html {
 .team__headline--header {
     font-size: 3rem;
     font-family: var(--font-header);
-    margin-top: 1rem;
+    margin-top: 3rem;
     justify-content: space-around;
 }
 
@@ -347,16 +347,16 @@ html {
     display: flex;    
     width: 90%;
     align-content: center;    
-    justify-content: space-around;
-    margin: 0 auto;
+    justify-content: space-between;
+    margin-bottom: 2rem;
 }
 
 .team__member {
     display: flex;
     position: relative;
     justify-items: center;
-    width: 25vw;
-    height: 25vw;
+    width: 26vw;
+    height: 26vw;
     transition: .6s ease-out;
     box-shadow: 0 10px 10px rgba(0, 0, 0, 0.5);
     margin: 2rem auto 0;
@@ -407,7 +407,7 @@ html {
     transition: 0.5s;
     color: #E9E9EC;
     background-color: #1345E4;
-    opacity: 0.1;
+    opacity: 0;
     margin: 0 auto;
 }
 
@@ -442,14 +442,13 @@ html {
 }
 
 .team__member--logo h2{
-    
     background-position: cover;
     background-repeat: no-repeat;
     background-image: url("photos/LogoWhite.svg");
     color: transparent;
-    width: 25vw;
-    height: 25vw;
-    margin: 35% auto;
+    width: 30vw;
+    height: 15vw;
+    margin: 35% 0 0 0;
 }
 
 /*** Team media ***/
@@ -514,7 +513,8 @@ html {
 
   .team__text {
     transform: translateY(0rem); 
-    opacity: 1;
+    opacity: 0.7;
+    bottom:0;
   }
 
   .team__text h4 {
@@ -528,8 +528,7 @@ html {
   .team__member--logo h2{
     
     display: none;
-}
-
+  }
 }
   
   /*** For ***/
