@@ -43,6 +43,8 @@ html {
   width: 100%;
   background-color: #01091C;
   position: sticky;
+  top: 0;
+  z-index: 999;
 }
 
 .nav > .nav-header {
@@ -86,7 +88,8 @@ html {
   display: inline-block;
   padding: 13px 40px;
   text-decoration: none;
-  color: #efefef;
+  color: var(--color-font-light);
+  margin-top: 1rem;
 }
 
 .nav > .nav-links > a:hover {
@@ -642,7 +645,7 @@ html {
 }
 .site-footer a:hover
 {
-  color:#3366cc;
+  color: var(--color-font-border);
   text-decoration:none;
 }
 .footer-links
@@ -654,13 +657,14 @@ html {
 {
   display:block
 }
-.footer-links p
+.footer-links a
 {
+  text-decoration: none;
   color:var(--color-font-light);
 }
 .footer-links a:active,.footer-links a:focus,.footer-links a:hover
 {
-  color:#3366cc;
+  color: var(--color-font-border);
   text-decoration:none;
 }
 .footer-links.inline li
