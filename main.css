@@ -313,25 +313,29 @@ html {
 /*** Functions ***/
 
 .mainFunctions__container {
-  
-  
   background-color:var(--color-primary);
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
   color:#E9E9EC;
-  padding-bottom: 50px ;
+  padding-bottom: 3rem;
 }
 
 .functions__headline {
-  width: 100%;
-  padding-bottom: 50px ;
+  width: 60%;
+  padding: 50px ;
   }
+
+.functions__headline--header {
+  font-size: 3rem;
+  font-family: var(--font-header);
+  justify-content: space-around;
+}
 
 .functions__list {
   display: flex;
-  width: 90%;
+  width:90%;
   flex-direction: row;    
   align-content: center;    
   justify-content: space-around;
@@ -340,29 +344,63 @@ html {
 }
 
 .functions__details {
-  display: flex;
-  flex-direction: column;    
-  padding: 7px;
-  align-content: center;    
-  justify-content: space-around;
-  margin: 0 auto;
-  border-top: 30px;
-  border-color: red;
-  border-radius: 15px;
+  width: 40vw;
+  height:25vw;
+  justify-items: center;
+  position: relative;
+  align-content: center;
+  margin: 2rem auto 0;
 }
 
-.mainFunctions__headline--header {
-    font-size: 3rem;
-    font-family: var(--font-header);
-    margin-top: 1rem;
-    justify-content: space-around;
+.functions__details:hover {
+  transform: translateY(1rem);
+  transition: 0.5s ease-out;
 }
 
 .functions__details-photo {
-  width: 100px;
-  height: 100px;  
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 1rem;
 }
 
+.function__feature {
+  width: 100%;
+  height: 30%;
+  background-color: var(--color-light);
+  position: absolute;
+  display: block;
+  justify-items: center;
+  bottom: 10%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0 auto;
+  }
+
+  .functions__name {
+    font-size: 2rem;
+    position: relative;
+    display: block;
+    justify-items: center;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0 auto;
+    }
+
+@media (max-width:1024px) {
+
+  .mainFunctions__container {
+    background-color:var(--color-primary);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color:#E9E9EC;
+    padding-bottom: 2rem;
+  }
+  
+}
 
 /*** Functions *************************************************************/
 
