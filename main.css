@@ -313,13 +313,12 @@ html {
 /*** Functions ***/
 
 .mainFunctions__container {
+  height: 60vw;
+  width: 100%
   display: flex;
   background: url(photos/diet.jpg) no-repeat top center;
   background-size: cover;
-  height: 100vh;
   align-content: space-between;
-  /* align-items: center; */
-  /* justify-content: center; */
   flex-direction: column;
 
 }
@@ -327,14 +326,12 @@ html {
 .functions__headline {
   width: 100%;
   height: 60%;
-  padding: 8rem ;
-  font-size: 4rem;
+  padding: 4vw ;
+  font-size: 3vw;
   font-family: var(--font-header);
   text-shadow: 2px 2px var(--color-light);
   text-align: right;
   color: #39b7dd;
- 
-  /* justify-content: space-around; */
   }
 
 
@@ -342,39 +339,115 @@ html {
   height: 40%;
   display: flex;
   flex-direction: row;    
-  /* align-content: center;    
-  justify-content: space-around;
-  margin: 0 auto;
-  padding-bottom: 50px ; */
 }
 
 .functions__details {
   width: 20%;
   height:30%;
-  justify-items: center;
   position: relative;
   align-content: center;
   margin: 2rem auto 0;
-  background-color: rgba(0,0,0, 0.4);
+  background-color: rgba(0,0,0, 0.5);
   border-radius: 1rem;
+}
+.functions__details strong{
+  font-size: 2vw;
+  color: #39b7dd;
 }
 
 .functions__details:hover {
   transform: translateY(1rem);
   transition: 0.5s ease-out;
-  background-color: rgba(0,0,0, 0.6);
+  background-color: rgba(0,0,0, 0.7);
   height:60%;
 }
 
 .functions__name {
-  font-size: 2rem;
+  font-size: 1vw;
   text-align: center;
   font-family: var(--font-header);
   color: var(--color-font-light);
-  padding: 1rem;
+  padding: 1vw;
   text-transform: uppercase;
 }
 
+  .functions__description {
+    font-size: 0.9vw;
+    text-align: center;
+    font-family: var(--font-header);
+    color: var(--color-font-light);
+    padding: 1rem;
+    text-transform: uppercase;
+    opacity: 0;
+  }
+
+  .functions__details:hover .functions__description {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+/* @media (max-width: 1024px) {
+
+  .mainFunctions__container {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    background: url(photos/diet.jpg) no-repeat top center;
+    background-size: cover;
+    align-content: space-between;
+    flex-direction: column;
+  
+  }
+  
+  .functions__headline {
+    width: 100%;
+    height: 60%;
+    padding: 4vw ;
+    font-size: 2vw;
+    font-family: var(--font-header);
+    text-shadow: 2px 2px var(--color-light);
+    text-align: right;
+    color: #39b7dd;
+    }
+  
+  
+  .functions__list {
+    height: 40%;
+    display: flex;
+    flex-direction: row;    
+  }
+  
+  .functions__details {
+    width: 20%;
+    height:30%;
+    justify-items: center;
+    position: relative;
+    align-content: center;
+    margin: 2rem auto 0;
+    background-color: rgba(0,0,0, 0.5);
+    border-radius: 1rem;
+  }
+  .functions__details strong{
+    font-size: 2vw;
+    color: #39b7dd;
+  }
+  
+  .functions__details: {
+    transform: translateY(1rem);
+    transition: 0.5s ease-out;
+    background-color: rgba(0,0,0, 0.7);
+    height:60%;
+  }
+  
+  .functions__name {
+    font-size: 1vw;
+    text-align: center;
+    font-family: var(--font-header);
+    color: var(--color-font-light);
+    padding: 1vw;
+    text-transform: uppercase;
+  }
+  
   .functions__description {
     font-size: 2rem;
     text-align: center;
@@ -385,64 +458,14 @@ html {
     opacity: 0;
   }
 
-  .functions__description .functions__details:hover {
-    font-size: 2rem;
-    text-align: center;
-    font-family: var(--font-header);
-    color: var(--color-font-light);
-    padding: 1rem;
-    text-transform: uppercase;
+  .functions__details:hover .functions__description {
     opacity: 1;
+    transform: translateY(0);
   }
+    
 
+} */
 
-
-  /* position: relative;
-  display: block;
-  justify-items: center;
-  top: 10%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  margin: 2rem auto; */
-  }
-
-/* .function__feature {
-  width: 100%;
-  height: 30%;
-  background-color: rgba(0,0,0, 0.5);
-  position: absolute;
-  display: block;
-  justify-items: center;
-  bottom: 10%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  margin: 0 auto;
-  } */
-
-  /* .functions__name {
-    font-size: 2rem;
-    position: relative;
-    display: block;
-    justify-items: center;
-    top: 10%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    margin: 2rem auto;
-    } */
-
-@media (max-width:1024px) {
-
-  .mainFunctions__container {
-    background-color:var(--color-primary);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    color:#E9E9EC;
-    padding-bottom: 2rem;
-  }
-  
-}
 
 /*** Functions *************************************************************/
 
