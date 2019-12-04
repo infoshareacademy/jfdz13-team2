@@ -366,13 +366,37 @@ html {
   height:60%;
 }
 
-.functions__name{
+.functions__name {
   font-size: 2rem;
   text-align: center;
   font-family: var(--font-header);
   color: var(--color-font-light);
   padding: 1rem;
   text-transform: uppercase;
+}
+
+  .functions__description {
+    font-size: 2rem;
+    text-align: center;
+    font-family: var(--font-header);
+    color: var(--color-font-light);
+    padding: 1rem;
+    text-transform: uppercase;
+    opacity: 0;
+  }
+
+  .functions__description .functions__details:hover {
+    font-size: 2rem;
+    text-align: center;
+    font-family: var(--font-header);
+    color: var(--color-font-light);
+    padding: 1rem;
+    text-transform: uppercase;
+    opacity: 1;
+  }
+
+
+
   /* position: relative;
   display: block;
   justify-items: center;
