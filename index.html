@@ -1,3 +1,4 @@
+  
 <!DOCTYPE html>
 <html lang="en">
 
@@ -16,40 +17,39 @@
 </head>
 
 <body>
-
-    <nav class="nav">
-        <input type="checkbox" id="nav-check">
-        <div class="nav-header">
-            <div class="nav-title">
-                <h1>Move On</h1>
-            </div>
-        </div>
-        <div class="nav-btn">
-            <label for="nav-check">
-                <span></span>
-                <span></span>
-                <span></span>
-            </label>
-        </div>
-
-        <div class="nav-links">
-            <a href="#">Home</a>
-            <a href="#">About Us</a>
-            <a href="#team">Team</a>
-            <a href="#">Our App</a>
-            <a href="#">Contact Us</a>
-        </div>
-
-        </div>
-
-    </nav>
+    
+        <nav class="nav">
+                <input type="checkbox" id="nav-check">
+                <div class="nav-header">
+                  <div class="nav-title">
+                    <a href="#">Move On</a>
+                  </div>
+                </div>
+                <div class="nav-btn">
+                  <label for="nav-check">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                  </label>
+                </div>
+                
+                <div class="nav-links">
+                  <a href="#">Home</a>
+                  <a href="#team">Team</a>
+                  <a href="#">Our App</a>
+                  <a href="#form">Contact Us</a>
+                </div>
+                
+              </div>
+        
+            </nav>
     <section id="hero" class="hero">
         <div class="mainHero">
-
+            
             <div class="mainHero__content">
                 <h2 class="mainHero__title">Plan your work out</h2>
                 <h2 class="mainHero__title">Then work your plan</h2>
-                <h1 class="mainHero__productName">MOVE ON!</h1>
+                <img class="mainHero__logo" src="photos/LogoWhite.svg" alt="Move On logo" />
                 <div class="mainHero__btn">
                     <a href="#form" class="mainHero__button shape"><span class="mainHero__buttonText">Start
                             now!</span></a>
@@ -69,8 +69,7 @@
     </section>
 
 
-    <section class="team__container" id="team">
-        <!--Kasia-->
+    <section class="team__container" id="team"><!--Kasia-->
         <div class="team__headline">
             <h2 class="team__headline--header">Meet Our Team</h2>
             <p class="team__headline--paragraph">
@@ -95,38 +94,27 @@
                 <div class="team__text">
                     <h4>Kamil</h4>
                     <p><a href="">View more</a></p>
-
-                   
-                </div>
-
                         <p>
                             <a href="https://github.com/kamilkieliszek" target="_blank"><i class="fab fa-github"></i></a>
                             <a href="https://www.linkedin.com/in/kamil-kieliszek-957513150/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
                         </p>
                     </div>
-
             </div>
             <div class="team__member">
                 <img src="photos/Krzysiek_900x900_2.jpg" alt="Krzysiek">
                 <div class="team__text">
                     <h4>Krzysiek</h4>
                     <p><a href="">View more</a></p>
-
-                   
-                </div>
-
                         <p>
                             <a href="https://github.com/KrzysztofKoczorski" target="_blank"><i class="fab fa-github"></i></a>
                             <a href="https://www.linkedin.com/in/krzysztof-koczorski" target="_blank"><i class="fab fa-linkedin-in"></i></a>
                             </p>
                         </div>
                     </div>
-
             </div>
-        </div>
         <div class="team__gallery">
             <div class="team__member">
-                <img src="photos/me.jpg" alt="Kasia">
+                <img src="photos/Kasia_900x900_2.jpg" alt="Kasia">
                 <div class="team__text">
                     <h4>Kasia</h4>
                     <p><a href="">View more</a></p>
@@ -136,11 +124,11 @@
                     </p>
                 </div>
             </div>
+            <div class="team__member--logo">
+                <h2>Move On</h2>
+            </div>
             <div class="team__member">
                 <img src="photos/Maciek_900x900_2.jpg" alt="Maciek">
-
-                
-
                     <div class="team__text">
                         <h4>Maciek</h4>
                         <p><a href="">View more</a></p>
@@ -149,35 +137,23 @@
                             <a href="http://linkedin.com/in/maciej-ratynski-346928109" target="_blank"><i class="fab fa-linkedin-in"></i></a>
                         </p>
                     </div>
-
             </div>
         </div>
     </section>
 
 
-    <section class="mainForm" id="form">
-        <h1 class="formHeader">Contact us</h1>
-        <div class="wrapper">
-            <div class="contact-form">
-                <div class="input-fields">
-                    <input type="text" class="input" placeholder="Name">
-                    <input type="email" class="input" placeholder="Email Address">
-                    <input type="text" class="input" placeholder="Subject">
-                </div>
-                <div class="msg">
-                    <textarea placeholder="Message"></textarea>
-                    <div class="btn">send</div>
-                </div>
-                <div class="gdpr">
-                    <label class="gdpr__label">
-                        <input type="checkbox" class="gdpr__checkbox">We will use your email only once - to inform you about the primiere
-                    </label>
 
-                    <label class="gdpr__label">
-                        <input type="checkbox" class="gdpr__checkbox">Your data is protected by the GDPR regulations
-                    </label>
-                </div>
-            </div>
+    <section class="mainForm" id="form">
+        <!--Maciek-->
+        <h1 class="mainForm_header">Contact us!</h1>
+        <form class="contactForm" action="">
+            <input class="contactForm_input" placeholder="First name" type="text">
+            <input class="contactForm_input" placeholder="Last name" type="text">
+            <input class="contactForm_input" placeholder="Email address" type="email">
+            <textarea class="contactForm_message" placeholder="Message"></textarea>
+        </form>
+        <div class="buttonArea">
+            <input class="formButton" type="submit"></input>
         </div>
     </section>
 
