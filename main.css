@@ -332,13 +332,14 @@ html {
   text-shadow: 2px 2px var(--color-light);
   text-align: right;
   color: #39b7dd;
-  }
-
+  
+}
 
 .functions__list {
   height: 40%;
   display: flex;
-  flex-direction: row;    
+  flex-direction: row;
+
 }
 
 .functions__details {
@@ -349,10 +350,13 @@ html {
   margin: 2vw auto 0;
   background-color: rgba(0,0,0, 0.5);
   border-radius: 1vw;
+
 }
+
 .functions__details strong{
   font-size: 2vw;
   color: #39b7dd;
+
 }
 
 .functions__details:hover {
@@ -360,6 +364,7 @@ html {
   transition: 0.5s ease-out;
   background-color: rgba(0,0,0, 0.7);
   height:60%;
+
 }
 
 .functions__name {
@@ -369,27 +374,31 @@ html {
   color: var(--color-font-light);
   padding: 1vw;
   text-transform: uppercase;
+
 }
 
-  .functions__description {
-    font-size: 0.9vw;
-    text-align: center;
-    font-family: var(--font-header);
-    color: var(--color-font-light);
-    padding: 1vw;
-    text-transform: uppercase;
-    opacity: 0;
-  }
+.functions__description {
+  font-size: 0.9vw;
+  text-align: center;
+  font-family: var(--font-header);
+  color: var(--color-font-light);
+  padding: 1vw;
+  text-transform: uppercase;
+  opacity: 0;
 
-  .functions__details:hover .functions__description {
-    opacity: 1;
-    transform: translateY(0);
-  }
+}
+
+.functions__details:hover .functions__description {
+  opacity: 1;
+  transform: translateY(0);
+
+}
 
 @media (max-width: 1024px) {
 
   .mainFunctions__container {
-    height: 100vw;  
+    height: 100vw;
+
   }
   
   .functions__headline {
@@ -397,20 +406,22 @@ html {
     padding: 3vw ;
     text-align: center;
     color: #39b7dd;
-    }
+
+  }
   
   
   .functions__list {
     height: 70%;
-    flex-direction: column;    
+    flex-direction: column;
+
   }
   
   .functions__details {
     width: 80%;
     height:19%;
+
   }
 
-  
   .functions__details:hover {
     transform: translateY(0);
     height:30%;
@@ -420,27 +431,19 @@ html {
   
   .functions__name {
     font-size: 3vw;
-    /* text-align: center;
-    font-family: var(--font-header);
-    color: var(--color-font-light);
-    padding: 1vw;
-    text-transform: uppercase; */
+
   }
 
 
   .functions__name strong{
     font-size: 4vw;
     color: #39b7dd;
+
   }
 
   .functions__description {
     font-size: 2vw;
-    /* text-align: center;
-    font-family: var(--font-header);
-    color: var(--color-font-light);
-    padding: 1vw;
-    text-transform: uppercase;
-    opacity: 0; */
+
   }
 
   .functions__details:hover .functions__name {
@@ -462,12 +465,11 @@ html {
     transform: translateY(1vw);
 
   }
-    
 
 }
 
 
-/*** Functions *************************************************************/
+/*** Functions ***/
 
 /*** Team ***/
 
