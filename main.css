@@ -331,11 +331,11 @@ html {
   padding: 4vw ;
   font-family: 'Staatliches', cursive;
   letter-spacing: 0.5vw;
-  font-size: 3vw;
+  font-size: 6vw;
   /* font-family: var(--font-header); */
-  text-shadow: 2px 2px var(--color-light);
+  /* text-shadow: 2px 2px var(--color-light); */
   text-align: right;
-  color: #39b7dd;
+  color: var(--color-light);
   
 }
 
@@ -382,25 +382,33 @@ html {
 .function__image{
   height: 5vw;
   width: 5vw;
-  background-color: #39b7dd;
+  background-color:var(--color-light);
   padding: 1vw ;
   margin: 0.5vw 2vw 0;
   border-radius: 0.3vw;
   
+  
 }
 
 .functions__name {
-  font-size: 0.5vw;
+  font-size: 1.2vw;
   text-align: center;
   font-family: var(--font-header);
   color: var(--color-font-light);
   padding: 1vw;
   text-transform: uppercase;
+  margin: 3% 0 0;
+
+}
+
+.function__image--img {
+  height: 3vw;
+  width: 3vw;
 
 }
 
 .functions__description {
-  font-size: 0.9vw;
+  font-size: 1.1vw;
   text-align: center;
   font-family: var(--font-header);
   color: var(--color-font-light);
@@ -429,7 +437,8 @@ html {
     height: 30%;
     padding: 3vw ;
     text-align: center;
-    color: #39b7dd;
+    color: var(--color-light);
+    font-weight: bold;;
 
   }
   
@@ -463,20 +472,12 @@ html {
   
   .function__image{
     display:none;
- 
-    
+
   }
 
   .functions__name {
     font-size: 3vw;
     float: center;
-
-  }
-
-
-  .functions__name strong{
-    font-size: 4vw;
-    color: #39b7dd;
 
   }
 
@@ -528,18 +529,19 @@ html {
 }
 
 .team__headline--header {
-    font-size: 3rem;
-    font-family: var(--font-header);
+    font-size: 6vw;
+    font-family: 'Staatliches', cursive;
+    letter-spacing: 0.5vw;
     margin-top: 3rem;
     justify-content: space-around;
 }
 
 .team__headline--paragraph {
     font-size: 2rem;
-    font-family: var(--font-header);
+    font-family: 'Staatliches', cursive;
+    letter-spacing: 0.5vw;
     line-height: 4rem;
     padding-top: 1rem;
-    letter-spacing: 0.1rem;
 }
 
 .team__gallery {
