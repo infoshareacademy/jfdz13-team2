@@ -94,8 +94,8 @@ html {
 }
 
 .nav > .nav-links > a:hover {
-  border-top: var(--color-light) solid 3px;
-  color: var(--color-font-border);
+  border-top:  #fe466a solid 3px;
+  color: #fe466a;
   opacity: 0.6;
   transition: 0.4s;
 
@@ -152,7 +152,7 @@ html {
     padding: 13px;
   }
   .nav > .nav-btn > label:hover,.nav  #nav-check:checked ~ .nav-btn > label {
-    background-color: var(--color-button)
+    background-color:#1345e4;
   }
   .nav > .nav-btn > label > span {
     display: block;
@@ -164,7 +164,7 @@ html {
     position: absolute;
     display: block;
     width: 100%;
-    background-color: #333;
+    background-color: #01091C;
     height: 0px;
     transition: all 0.3s ease-in;
     overflow-y: hidden;
@@ -313,6 +313,202 @@ html {
 
 /*** Functions ***/
 
+.mainFunctions__container {
+  height: 50vw;
+  width: 100%;
+
+  display: flex;
+  background: url(photos/running3.jpg) no-repeat top center;
+  background-size: cover;
+  align-content: space-between;
+  flex-direction: column;
+
+}
+
+.functions__headline {
+  width: 100%;
+  height: 60%;
+  padding: 4vw ;
+  font-family: 'Staatliches', cursive;
+  letter-spacing: 0.5vw;
+  font-size: 6vw;
+  /* font-family: var(--font-header); */
+  /* text-shadow: 2px 2px var(--color-light); */
+  text-align: right;
+  color: var(--color-light);
+  
+}
+
+.functions__list {
+  height: 40%;
+  display: flex;
+  flex-direction: row;
+
+}
+
+.functions__details {
+  width: 23%;
+  height:35%;
+  position: relative;
+  align-content: center;
+  margin: 2vw auto 0;
+  background-color: rgba(0,0,0, 0.5);
+  border-radius: 0.3vw;
+
+}
+
+.functions__details strong{
+  font-size: 2vw;
+  color: #39b7dd;
+
+}
+
+.functions__details:hover {
+  transform: translateY(1vw);
+  transition: 0.5s ease-out;
+  background-color: rgba(0,0,0, 0.7);
+  height:65%;
+
+}
+
+
+.functions__feature {
+  display: flex;
+  align-items: center;
+
+
+}
+
+.function__image{
+  height: 5vw;
+  width: 5vw;
+  background-color:var(--color-light);
+  padding: 1vw ;
+  margin: 0.5vw 2vw 0;
+  border-radius: 0.3vw;
+  
+  
+}
+
+.functions__name {
+  font-size: 1.2vw;
+  text-align: center;
+  font-family: var(--font-header);
+  color: var(--color-font-light);
+  padding: 1vw;
+  text-transform: uppercase;
+  margin: 3% 0 0;
+
+}
+
+.function__image--img {
+  height: 3vw;
+  width: 3vw;
+
+}
+
+.functions__description {
+  font-size: 1.1vw;
+  text-align: center;
+  font-family: var(--font-header);
+  color: var(--color-font-light);
+  padding: 1vw;
+  text-transform: uppercase;
+  opacity: 0;
+
+}
+
+.functions__details:hover .functions__description {
+  opacity: 1;
+  transform: translateY(0);
+  transition: 1.5s ease-out;
+}
+
+@media (max-width: 1024px) {
+
+  .mainFunctions__container {
+    height: 100vw;
+    background: url(photos/running3.jpg) no-repeat top left;
+    background-size: cover;
+    
+  }
+  
+  .functions__headline {
+    height: 30%;
+    padding: 3vw ;
+    text-align: center;
+    color: var(--color-light);
+    font-size: 2rem;
+
+  }
+  
+  
+  .functions__list {
+    height: 70%;
+    flex-direction: column;
+
+  }
+  
+  .functions__details {
+    width: 80%;
+    height:19%;
+    
+
+  }
+
+  .functions__details:hover {
+    transform: translateY(0);
+    height:30%;
+    width: 85%;
+  
+  }
+
+  .functions__feature {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  
+  }
+  
+  .function__image{
+    display:none;
+
+  }
+
+  .functions__name {
+    font-size: 3vw;
+    float: center;
+
+  }
+
+  .functions__description {
+    font-size: 2vw;
+
+  }
+
+  .functions__details:hover .functions__name {
+    font-size: 2vw;
+    transform: translateY(0);
+    transition: 0.5s ease-out;
+
+  }
+
+  .functions__details:hover .functions__name strong {
+    font-size: 3vw;
+    transform: translateY(0);
+    transition: 0.5s ease-out;
+
+  }
+
+  .functions__details:hover .functions__description {
+    font-size: 2vw;
+    transform: translateY(1vw);
+
+  }
+
+}
+
+
 /*** Functions ***/
 
 /*** Team ***/
@@ -333,18 +529,19 @@ html {
 }
 
 .team__headline--header {
-    font-size: 3rem;
-    font-family: var(--font-header);
+    font-size: 6vw;
+    font-family: 'Staatliches', cursive;
+    letter-spacing: 0.5vw;
     margin-top: 3rem;
     justify-content: space-around;
 }
 
 .team__headline--paragraph {
     font-size: 2rem;
-    font-family: var(--font-header);
+    font-family: 'Staatliches', cursive;
+    letter-spacing: 0.5vw;
     line-height: 4rem;
     padding-top: 1rem;
-    letter-spacing: 0.1rem;
 }
 
 .team__gallery {
@@ -535,84 +732,164 @@ html {
   }
 }
   
-  /*** For ***/
-
+  
+/*** Form ***/
 .mainForm {
-    display: flex;
-    flex-direction: column;
-    height: 90vh;
-    width: 100%;
-    justify-content: space-around;
-    background-color: var(--color-primary);
-} 
-
-.mainForm_header {
-    font-family: var(--font-header);
-    -webkit-text-stroke: 1px var(--color-font-border);
-    color :var(--color-font-light);
-    margin-bottom: var(--gutter);
-    text-align: center;
-    font-size: 2.5rem;
+  display: flex;
+  background: url(photos/person-swimming-on-body-of-water-863988.jpg) no-repeat top center;
+  background-size: cover;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.formHeader {
+  font-family: 'Staatliches', cursive;
+  color: var(--color-font-light);
+  -webkit-text-stroke: 1px #39b7dd;
+  font-size: 3rem;
+  margin-bottom: var(--gutter);
 }
 
-.contactForm {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 50%;
-    margin: 0 auto;
-    margin-bottom: var(--gutter);
+.formHeader h1 {
+  margin-bottom: 60%;
+  letter-spacing: 0.5vw;
 }
 
-.contactForm_input {
-    height: 3rem;
-    width: 100%;
-    margin-top: 10px;
+.wrapper {
+  display: flex;
+  position: relative;
+  top: 30%;
+  transform: translateY(-90%);
+  width: 100%;
+  padding: 0 20px;
 }
-
-.contactForm_message {
-    height: 100px;
-    width: 100%;
-    margin-top: 10px;
+  
+.contact-form { 
+  display: flex;
+  max-width: 550px;
+  margin: 0 auto;
+  background: rgba(0,0,0,0.8);
+  padding: 30px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  width: 60%;
 }
-
-.contactForm_input::placeholder {
-    font-family: var(--font-body);
+  
+.input-fields{
+  display: flex;
+  flex-direction: column;
+  margin-right: 4%;
 }
-
-.contactForm_message::placeholder {
-    font-family: var(--font-body);
+  
+.input-fields,
+  .msg{
+  width: 90%;
 }
-
-.buttonArea {
-    display: flex;
-    justify-content: center;
-    align-content: center;
-}
-
-.formButton {
-    background-color: var(--color-button);
-    border: none;
-    color: var(--color-font-light);
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    font-size: 32px;
-    max-width: 50%;
-    border-radius: 12px;
+  
+.input-fields .input,
+  .msg textarea{
+  margin: 10px 0;
+  background: transparent;
+  border: 0px;
+  border-bottom: 2px solid #c5ecfd;
+  padding: 10px;
+  color: #c5ecfd;
+  width: 100%;
   }
-
-@media (max-width: 1024px) {
-    .contactForm {
-        width: 70%;
-    }
+  .msg textarea{
+  height: 177px;
+  }
+  .msg textarea::placeholder {
+  font-family: var(--font-body);
+  }
+  .msg textarea:focus {
+  outline: none;
+  }
+  .msg textarea:focus::placeholder {
+  font-weight: bold;
+  }
+  .input::placeholder {
+  font-family: var(--font-body);
+  }
+  .input:focus {
+  outline: none;
+  }
+  .input:focus::placeholder {
+  font-weight: bold;
+  }
+  ::-webkit-input-placeholder {
+  /* Chrome/Opera/Safari */
+  color: #c5ecfd;
+  }
+  ::-moz-placeholder {
+  /* Firefox 19+ */
+  color: #c5ecfd;
+  }
+  :-ms-input-placeholder {
+  /* IE 10+ */
+  color: #c5ecfd;
 }
 
+.msg .btn-msg {
+    background: #39b7dd;
+    text-align: center;
+    padding: 15px;
+    border-radius: 5px;
+    color: var(--color-font-light);
+    font-family: var(--font-header);
+    cursor: pointer;
+    text-transform: uppercase;
+}
 
-/*** Form ***/
-
-/*** Form ***/
+  .gdpr {
+  display: flex;
+  /* justify-content: space-between; */
+  flex-direction: column;
+  margin-top: 7px;
+  }
+  .gdpr__label {
+  color: var(--color-font-light);
+  font-family: var(--font-body);
+  font-size: 1rem;
+  }
+@media screen and (max-width: 600px) {
+  .mainForm {
+  height: 150vh;
+  }
+  .formHeader h1 {
+    font-size: 2rem;
+  }
+  .wrapper {
+  margin-top: 20px;
+  transform: translateY(-50%);
+  }
+  .contact-form{
+  flex-direction: column;
+  margin-top: 10px;
+  width: 90%;
+  }
+  .msg textarea{
+  height: 70px;
+  }
+  .input-fields,
+  .msg{
+  width: 100%;
+  }
+}
+  @media screen and (max-height: 540px) {
+  .mainForm {
+  height: 170vh;
+  }
+  .formHeader h1 {
+    font-size: 2rem;
+  }
+  .wrapper {
+  transform: translateY(-40%);
+  }
+} 
+  
+  /*** Form ***/
 
 /*** Footer ***/
 .site-footer
@@ -634,7 +911,7 @@ html {
 }
 .site-footer h6
 {
-  color: var(--color-button);
+  color:  #fe466a;
   font-size:16px;
   text-transform:uppercase;
   margin-top:5px;
@@ -665,7 +942,7 @@ html {
 }
 .footer-links a:active,.footer-links a:focus,.footer-links a:hover
 {
-  color: var(--color-font-border);
+  color:  #fe466a;
   text-decoration:none;
 }
 .footer-links.inline li
@@ -789,5 +1066,6 @@ html {
     font-weight:600
   }
 }
+
 /*** Footer ***/
 
