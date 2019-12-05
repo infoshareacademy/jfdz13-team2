@@ -94,8 +94,8 @@ html {
 }
 
 .nav > .nav-links > a:hover {
-  border-top: var(--color-light) solid 3px;
-  color: var(--color-font-border);
+  border-top:  #fe466a solid 3px;
+  color: #fe466a;
   opacity: 0.6;
   transition: 0.4s;
 
@@ -911,7 +911,7 @@ html {
 }
 .site-footer h6
 {
-  color: var(--color-button);
+  color:  #fe466a;
   font-size:16px;
   text-transform:uppercase;
   margin-top:5px;
@@ -942,7 +942,7 @@ html {
 }
 .footer-links a:active,.footer-links a:focus,.footer-links a:hover
 {
-  color: var(--color-font-border);
+  color:  #fe466a;
   text-decoration:none;
 }
 .footer-links.inline li
