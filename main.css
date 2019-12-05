@@ -546,10 +546,11 @@ html {
 }
 
 .formHeader {
-  font-family: var(--font-header);
+  font-family: 'Staatliches';
+  letter-spacing: 2px;
   color: var(--color-font-light);
   -webkit-text-stroke: 1px #39b7dd;
-  font-size: 3rem;  
+  font-size: 4rem;  
 }
 
  
@@ -649,7 +650,6 @@ html {
 
 .gdpr {
   display: flex;
-  /* justify-content: space-between; */
   flex-direction: column;
   margin-top: 7px;
   
