@@ -313,6 +313,201 @@ html {
 
 /*** Functions ***/
 
+.mainFunctions__container {
+  height: 50vw;
+  width: 100%;
+
+  display: flex;
+  background: url(photos/running3.jpg) no-repeat top center;
+  background-size: cover;
+  align-content: space-between;
+  flex-direction: column;
+
+}
+
+.functions__headline {
+  width: 100%;
+  height: 60%;
+  padding: 4vw ;
+  font-family: 'Staatliches', cursive;
+  letter-spacing: 0.5vw;
+  font-size: 3vw;
+  /* font-family: var(--font-header); */
+  text-shadow: 2px 2px var(--color-light);
+  text-align: right;
+  color: #39b7dd;
+  
+}
+
+.functions__list {
+  height: 40%;
+  display: flex;
+  flex-direction: row;
+
+}
+
+.functions__details {
+  width: 23%;
+  height:35%;
+  position: relative;
+  align-content: center;
+  margin: 2vw auto 0;
+  background-color: rgba(0,0,0, 0.5);
+  border-radius: 0.3vw;
+
+}
+
+.functions__details strong{
+  font-size: 2vw;
+  color: #39b7dd;
+
+}
+
+.functions__details:hover {
+  transform: translateY(1vw);
+  transition: 0.5s ease-out;
+  background-color: rgba(0,0,0, 0.7);
+  height:65%;
+
+}
+
+
+.functions__feature {
+  display: flex;
+  align-items: center;
+
+
+}
+
+.function__image{
+  height: 5vw;
+  width: 5vw;
+  background-color: #39b7dd;
+  padding: 1vw ;
+  margin: 0.5vw 2vw 0;
+  border-radius: 0.3vw;
+  
+}
+
+.functions__name {
+  font-size: 0.5vw;
+  text-align: center;
+  font-family: var(--font-header);
+  color: var(--color-font-light);
+  padding: 1vw;
+  text-transform: uppercase;
+
+}
+
+.functions__description {
+  font-size: 0.9vw;
+  text-align: center;
+  font-family: var(--font-header);
+  color: var(--color-font-light);
+  padding: 1vw;
+  text-transform: uppercase;
+  opacity: 0;
+
+}
+
+.functions__details:hover .functions__description {
+  opacity: 1;
+  transform: translateY(0);
+  transition: 1.5s ease-out;
+}
+
+@media (max-width: 1024px) {
+
+  .mainFunctions__container {
+    height: 100vw;
+    background: url(photos/running3.jpg) no-repeat top left;
+    background-size: cover;
+    
+  }
+  
+  .functions__headline {
+    height: 30%;
+    padding: 3vw ;
+    text-align: center;
+    color: #39b7dd;
+
+  }
+  
+  
+  .functions__list {
+    height: 70%;
+    flex-direction: column;
+
+  }
+  
+  .functions__details {
+    width: 80%;
+    height:19%;
+    
+
+  }
+
+  .functions__details:hover {
+    transform: translateY(0);
+    height:30%;
+    width: 85%;
+  
+  }
+
+  .functions__feature {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  
+  }
+  
+  .function__image{
+    display:none;
+ 
+    
+  }
+
+  .functions__name {
+    font-size: 3vw;
+    float: center;
+
+  }
+
+
+  .functions__name strong{
+    font-size: 4vw;
+    color: #39b7dd;
+
+  }
+
+  .functions__description {
+    font-size: 2vw;
+
+  }
+
+  .functions__details:hover .functions__name {
+    font-size: 2vw;
+    transform: translateY(0);
+    transition: 0.5s ease-out;
+
+  }
+
+  .functions__details:hover .functions__name strong {
+    font-size: 3vw;
+    transform: translateY(0);
+    transition: 0.5s ease-out;
+
+  }
+
+  .functions__details:hover .functions__description {
+    font-size: 2vw;
+    transform: translateY(1vw);
+
+  }
+
+}
+
+
 /*** Functions ***/
 
 /*** Team ***/
