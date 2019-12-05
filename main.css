@@ -152,7 +152,7 @@ html {
     padding: 13px;
   }
   .nav > .nav-btn > label:hover,.nav  #nav-check:checked ~ .nav-btn > label {
-    background-color: var(--color-button)
+    background-color:#1345e4;
   }
   .nav > .nav-btn > label > span {
     display: block;
@@ -164,7 +164,7 @@ html {
     position: absolute;
     display: block;
     width: 100%;
-    background-color: #333;
+    background-color: #01091C;
     height: 0px;
     transition: all 0.3s ease-in;
     overflow-y: hidden;
@@ -744,11 +744,16 @@ html {
   flex-direction: column;
 }
 .formHeader {
-  font-family: var(--font-header);
+  font-family: 'Staatliches', cursive;
   color: var(--color-font-light);
   -webkit-text-stroke: 1px #39b7dd;
   font-size: 3rem;
   margin-bottom: var(--gutter);
+}
+
+.formHeader h1 {
+  margin-bottom: 60%;
+  letter-spacing: 0.5vw;
 }
 
 .wrapper {
@@ -852,6 +857,9 @@ html {
   .mainForm {
   height: 150vh;
   }
+  .formHeader h1 {
+    font-size: 2rem;
+  }
   .wrapper {
   margin-top: 20px;
   transform: translateY(-50%);
@@ -872,6 +880,9 @@ html {
   @media screen and (max-height: 540px) {
   .mainForm {
   height: 170vh;
+  }
+  .formHeader h1 {
+    font-size: 2rem;
   }
   .wrapper {
   transform: translateY(-40%);
