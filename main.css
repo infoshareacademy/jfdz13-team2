@@ -91,6 +91,7 @@ html {
   text-decoration: none;
   color: var(--color-font-light);
   margin-top: 1rem;
+  border-top:transparent solid 3px;
 }
 
 .nav > .nav-links > a:hover {
@@ -902,7 +903,7 @@ html {
 }
 .site-footer hr
 {
-  border-top-color: var(--color-font-border);
+  border-top-color: #fe466a;
   opacity:0.5
 }
 .site-footer hr.small
