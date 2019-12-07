@@ -748,12 +748,12 @@ html {
   font-family: 'Staatliches', cursive;
   color: var(--color-font-light);
   -webkit-text-stroke: 1px #39b7dd;
-  font-size: 3rem;
   margin-bottom: var(--gutter);
 }
 
 .formHeader h1 {
-  margin-bottom: 60%;
+  margin-bottom: 50%;
+  font-size: 6vw;
   letter-spacing: 0.5vw;
 }
 
