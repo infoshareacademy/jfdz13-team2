@@ -333,8 +333,6 @@ html {
   font-family: 'Staatliches', cursive;
   letter-spacing: 0.5vw;
   font-size: 6vw;
-  /* font-family: var(--font-header); */
-  /* text-shadow: 2px 2px var(--color-light); */
   text-align: right;
   color: var(--color-light);
   
@@ -363,7 +361,7 @@ html {
   transform: translateY(1vw);
   transition: 0.5s ease-out;
   background-color: rgba(0,0,0, 0.7);
-  height:65%;
+  height:68%;
 
 }
 
@@ -484,26 +482,6 @@ html {
     opacity: 1;
 
   }
-
-  /* .functions__details:hover .functions__name {
-    font-size: 2vw;
-    transform: translateY(0);
-    transition: 0.5s ease-out;
-
-  }
-
-  .functions__details:hover .functions__name strong {
-    font-size: 3vw;
-    transform: translateY(0);
-    transition: 0.5s ease-out;
-
-  }
-
-  .functions__details:hover .functions__description {
-    font-size: 2vw;
-    transform: translateY(1vw);
-
-  } */
 
 }
 
