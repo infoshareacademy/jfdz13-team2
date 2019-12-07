@@ -357,11 +357,11 @@ html {
 
 }
 
-.functions__details strong{
+/* .functions__details strong{
   font-size: 2vw;
   color: #39b7dd;
 
-}
+} */
 
 .functions__details:hover {
   transform: translateY(1vw);
