@@ -153,7 +153,7 @@ html {
     padding: 13px;
   }
   .nav > .nav-btn > label:hover,.nav  #nav-check:checked ~ .nav-btn > label {
-    background-color:#1345e4;
+    background-color: #fe466a;
   }
   .nav > .nav-btn > label > span {
     display: block;
