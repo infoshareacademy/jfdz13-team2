@@ -285,7 +285,9 @@ html {
     font-size: 4rem;
     text-align: right;
     max-width: 60%;
+
     /* -webkit-text-stroke: 1px var(--color-font-border); */
+
   }
 
   .mainHero__logo {
