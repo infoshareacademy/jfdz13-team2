@@ -511,7 +511,7 @@ html {
     font-size: 6vw;
     font-family: 'Staatliches', cursive;
     letter-spacing: 0.5vw;
-    margin-top: 8rem;
+    margin-top: 5rem;
     justify-content: space-around;
 }
 
@@ -651,7 +651,6 @@ html {
 
   .team__headline--header {
       font-size: 2rem;
-      margin-top: 5rem;
   }
 
   .team__headline--paragraph {
