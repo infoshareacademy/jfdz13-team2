@@ -40,20 +40,21 @@
     animation: goLeft 200s linear infinite;
 }
 
+
 @keyframes goLeft {
     100%{
         background-position:        
-                                0vw 0px,
-                                0vw 0px,
-                                0vw 0px,
-                                0vw 0px,
+                                -1000vw 0px,
+                                -600vw 0px,
+                                -300vw 0px,
+                                -300vw 0px,
                                 0vw 0px, 
                                 0vw 0px,
-                                -200vw 0px,
-                                -200vw 0px,
-                                -400vw 0px,
-                                -500vw 0px,
-                                -600vw 0px;
+                                50vw 0px,
+                                50vw 0px,
+                                100vw 0px,
+                                200vw 0px,
+                                300vw 0px;
     }
 }
 .game-container {
@@ -61,7 +62,6 @@
     display: flex;
     width: 100vw;
     height: 100vh;
-    padding: 20px;
     background-color: var(--color-primary);
     overflow: hidden;
 }
@@ -79,8 +79,20 @@
     width: 200px;
     height: 200px;
     align-self: flex-end;
-    overflow: hidden;   
+    overflow: hidden;  
+    left: 25%;
+    bottom: 7%; 
 }
+
+/* .mushroom-small {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    align-self: flex-end;
+    overflow: hidden;
+    left: 50%;
+    bottom: 8%;
+} */
 
 /**** Player Animation ****/
 
