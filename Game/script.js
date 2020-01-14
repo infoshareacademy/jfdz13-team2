@@ -2,6 +2,7 @@
 
 /*** World ***/
 const world = document.querySelector('#world');
+const backgroundWorld = document.querySelector('#background-container');
 const worldWidth = parseInt(window.getComputedStyle(world).width);
 const worldHeight = parseInt(window.getComputedStyle(world).height);
 
@@ -26,18 +27,35 @@ let playerStartPosition = playerPositionY;
 
 /*** Player Animation ***/
 
+
+const jumpDown = () => {
+    player.style.top = `${playerStartPosition}px`
+    document.getElementById('player-movement').className = 'player-movement player-run';
+}
+
+
 window.addEventListener('keydown', event => {
     console.log('event: ', event.code);
-   
-    if (event.code === run) {
-        document.getElementById('player-movement').className = 'player-movement player-run';
-        if (playerPositionX + playerWidth + playerSpeedX <= worldWidth) {
-            playerPositionX += playerSpeedX;
-            player.style.left = `${playerPositionX}px`;   
-        }else{
-            player.style.left = `${playerPositionX}px`;
-        } 
-    }
+
+    if (event.code === jump) {
+        document.getElementById('player-movement').className = 'player-movement player-jump';
+
+            playerPositionY = playerMaxJump;
+            player.style.top = `${playerPositionY}px`
+
+            setTimeout(jumpDown, 600);
+
+}
+        
+    // if (event.code === run) {
+    //     document.getElementById('player-movement').className = 'player-movement player-run';
+    //     if (playerPositionX + playerWidth + playerSpeedX <= worldWidth) {
+    //         playerPositionX += playerSpeedX;
+    //         player.style.left = `${playerPositionX}px`;   
+    //     }else{
+    //         player.style.left = `${playerPositionX}px`;
+    //     } 
+    // }
     /*Plynna animacja*/
     /*if (event.code === 'KeyN') {
         let start = Date.now();
@@ -60,12 +78,7 @@ window.addEventListener('keydown', event => {
     //         player.style.left = `${playerPositionX}px`;
     //     } 
     // }
-    if (event.code === jump) {
-        document.getElementById('player-movement').className = 'player-movement player-jump';
-            //player.style.top = `${playerMaxJump}px`;
-
-            playerPositionY = playerMaxJump;
-            player.style.top = `${playerPositionY}px`
+    
 
         // if (playerPositionY >= playerSpeedY) {
         //     playerPositionY -= playerSpeedY;
@@ -73,7 +86,7 @@ window.addEventListener('keydown', event => {
         // }else{
         //     player.style.top = `${playerPositionY}px`;
         // }
-    }
+    
     // if (event.code === down) {
     //     document.getElementById('player-movement').className = 'player-movement player-down';
     //     if (playerPositionY + playerHeight + playerSpeedY <= worldHeight) {
@@ -88,15 +101,38 @@ window.addEventListener('keydown', event => {
     // }
 });
 
-window.addEventListener('keyup', event => {
+// window.addEventListener('keyup', event => {
     
-    if ((event.code === run) || (event.code === walk) || (event.code === jump) || (event.code === kick)) {
+//     // if ((event.code === run) || (event.code === walk) || (event.code === jump) || (event.code === kick)) {
         
-        player.style.top = `${playerStartPosition}px`
-        document.getElementById('player-movement').className = 'player-movement player-run';
+//         player.style.top = `${playerStartPosition}px`
+//         document.getElementById('player-movement').className = 'player-movement player-run';
 
-    }
-    if (event.code === walk) {
-        player.style.transform = '';
-    }
-});
+//     // }
+//     // if (event.code === walk) {
+//     //     player.style.transform = '';
+//     // }
+// });
+
+
+// Obstacles animation //
+
+
+
+const obstaclesType = ['mushroom1', 'mushroom2', 'mushroom3', 'mushroom4']
+// let indexOfObstacle = 0
+const generateRandomObstacleType = () => {
+  
+    return Math.floor(Math.random() *4);
+    
+}
+// console.log(generateRandomObstacleType());
+
+let obstacleType = obstaclesType[generateRandomObstacleType()];
+console.log(obstacleType);
+
+const obstacle = document.createElement('div');
+
+obstacle.classList.add(obstacleType);
+
+backgroundWorld.appendChild(obstacle);
