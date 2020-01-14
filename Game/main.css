@@ -44,7 +44,7 @@
 @keyframes goLeft {
     100%{
         background-position:        
-                                -1000vw 0px,
+                                -1300vw 0px,
                                 -600vw 0px,
                                 -300vw 0px,
                                 -300vw 0px,
@@ -84,15 +84,7 @@
     bottom: 7%; 
 }
 
-/* .mushroom-small {
-    position: absolute;
-    width: 60px;
-    height: 60px;
-    align-self: flex-end;
-    overflow: hidden;
-    left: 50%;
-    bottom: 8%;
-} */
+
 
 /**** Player Animation ****/
 
@@ -132,5 +124,26 @@
     }
     to {
         transform: translate3d(-100%,0,0);
+    }
+}
+
+/*** Obstacles ***/
+
+.mushroom-small {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    align-self: flex-end;
+    overflow: hidden;
+    bottom: 9%;
+    animation: goMushrooms 20s linear infinite;
+}
+
+@keyframes goMushrooms {
+    from {
+        right: -5%;
+    }
+    to {
+        right: 125%
     }
 }
