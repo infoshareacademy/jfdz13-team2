@@ -136,3 +136,30 @@ const obstacle = document.createElement('div');
 obstacle.classList.add(obstacleType);
 
 backgroundWorld.appendChild(obstacle);
+
+
+
+/*** Score ***/
+
+let score = 0;
+const scoreElement = document.createElement('h2');
+scoreElement.innerText = score;
+document.querySelector('.score-container').appendChild(scoreElement);
+
+
+const increaseScore = () => {
+    let seconds = 59;
+    const intervalId = setInterval(function() {
+        if (seconds === 0) {
+            clearInterval(intervalId);
+        }
+        seconds--;
+        score += 50;
+        scoreElement.innerText = score;
+        
+  
+    }, 1000)
+};
+
+increaseScore();
+
