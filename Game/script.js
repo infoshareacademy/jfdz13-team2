@@ -118,25 +118,29 @@ window.addEventListener('keydown', event => {
 // Obstacles animation //
 
 
-
 const obstaclesType = ['mushroom1', 'mushroom2', 'mushroom3', 'mushroom4']
-// let indexOfObstacle = 0
+
 const generateRandomObstacleType = () => {
   
     return Math.floor(Math.random() *4);
     
 }
-// console.log(generateRandomObstacleType());
 
-let obstacleType = obstaclesType[generateRandomObstacleType()];
-console.log(obstacleType);
+intervalId = setInterval(() => {
+    addNewObstacle();
+  }, 1500);
 
+const addNewObstacle = () => {
 const obstacle = document.createElement('div');
 
-obstacle.classList.add(obstacleType);
+obstacle.classList.add(obstaclesType[generateRandomObstacleType()]);
 
 backgroundWorld.appendChild(obstacle);
 
+setTimeout(() => {
+    obstacle.remove();
+  }, 8000)
+};
 
 
 /*** Score ***/
