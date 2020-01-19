@@ -126,21 +126,72 @@ const generateRandomObstacleType = () => {
     
 }
 
-intervalId = setInterval(() => {
-    addNewObstacle();
-  }, 1500);
+// intervalId = setInterval(() => {
+//     addNewObstacle();
+//   }, 1500);
 
-const addNewObstacle = () => {
-const obstacle = document.createElement('div');
+// let mushroomStartPosition = obstacle.style.left = `${worldWidth - 100}px`;
+class Mushroom {
+    position = worldWidth - 100;
+    domElement = null;
 
-obstacle.classList.add(obstaclesType[generateRandomObstacleType()]);
+    initilize = () => {
+        const obstacle = document.createElement('div');
+        obstacle.classList.add(obstaclesType[generateRandomObstacleType()]);
+        obstacle.style.left = `${this.position}px`;
 
-backgroundWorld.appendChild(obstacle);
+        backgroundWorld.appendChild(obstacle);
 
-setTimeout(() => {
-    obstacle.remove();
-  }, 8000)
-};
+        this.domElement = obstacle;
+    }
+
+    move = () => {
+        this.position = this.position - 5;
+        this.domElement.style.left = `${this.position}px`;
+    }
+}
+
+setInterval(() => {
+    const mushroom = new Mushroom();
+    mushroom.initilize()
+    
+    const intervalId = setInterval(() => {
+        mushroom.move();
+
+        if (mushroom.position <= 0) {
+            clearInterval(intervalId);
+            // mushroom.domElement.remove();
+        }
+
+    }, 1)}, 
+3000);
+
+
+// const addNewObstacle = () => {
+//     const obstacle = document.createElement('div');
+
+//     obstacle.classList.add(obstaclesType[generateRandomObstacleType()]);
+
+//     obstacle.style.left = `${MUSHROOM_POSITION}px`
+
+//     backgroundWorld.appendChild(obstacle);
+
+//     setInterval(() => {
+//         MUSHROOM_POSITION = MUSHROOM_POSITION - 1;
+//         obstacle.style.left = `${MUSHROOM_POSITION}px`
+//     }, 1)
+// }
+
+// addNewObstacle();
+
+const movingMushroom = () => {
+
+}
+
+// setTimeout(() => {
+//     obstacle.remove();
+//   }, 8000)
+// };
 
 
 /*** Score ***/

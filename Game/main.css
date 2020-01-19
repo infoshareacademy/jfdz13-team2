@@ -139,7 +139,7 @@
     align-self: flex-end;
     overflow: hidden;
     bottom: 9%;
-    animation: goMushrooms 8s linear infinite;
+    /* animation: goMushrooms 8s linear infinite; */
 }
 
 .mushroom2 {
@@ -152,7 +152,7 @@
     align-self: flex-end;
     overflow: hidden;
     bottom: 9%;
-    animation: goMushrooms 8s linear infinite;
+    /* animation: goMushrooms 8s linear infinite; */
 }
 
 .mushroom3 {
@@ -165,7 +165,7 @@
     align-self: flex-end;
     overflow: hidden;
     bottom: 9%;
-    animation: goMushrooms 8s linear infinite;
+    /* animation: goMushrooms 8s linear infinite; */
 }
 
 .mushroom4 {
@@ -178,7 +178,7 @@
     align-self: flex-end;
     overflow: hidden;
     bottom: 9%;
-    animation: goMushrooms 8s linear infinite;
+    /* animation: goMushrooms 8s linear infinite; */
 }
 
 @keyframes goMushrooms {
