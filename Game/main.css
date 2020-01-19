@@ -16,6 +16,8 @@
     --font-body: 'Marvel', sans-serif;
     
     --gutter: 1rem;
+
+    --obstaclePosition: 80px;
   }
 
 .background-container {
@@ -81,7 +83,7 @@
     align-self: flex-end;
     overflow: hidden;  
     left: 25%;
-    bottom: 7%; 
+    bottom: 50px; 
 }
 
 
@@ -138,7 +140,7 @@
     height: 60px;
     align-self: flex-end;
     overflow: hidden;
-    bottom: 9%;
+    bottom: var(--obstaclePosition);
     /* animation: goMushrooms 8s linear infinite; */
 }
 
@@ -151,7 +153,7 @@
     height: 60px;
     align-self: flex-end;
     overflow: hidden;
-    bottom: 9%;
+    bottom: var(--obstaclePosition);
     /* animation: goMushrooms 8s linear infinite; */
 }
 
@@ -164,7 +166,7 @@
     height: 60px;
     align-self: flex-end;
     overflow: hidden;
-    bottom: 9%;
+    bottom: var(--obstaclePosition);
     /* animation: goMushrooms 8s linear infinite; */
 }
 
@@ -177,7 +179,7 @@
     height: 60px;
     align-self: flex-end;
     overflow: hidden;
-    bottom: 9%;
+    bottom: var(--obstaclePosition);
     /* animation: goMushrooms 8s linear infinite; */
 }
 

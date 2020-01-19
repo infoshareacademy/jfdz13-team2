@@ -19,12 +19,12 @@ const playerHeight = parseInt(window.getComputedStyle(player).height);
 
 let playerSpeedX = 0;
 let playerSpeedY = 0;
-let playerMaxJump = 600;
+let playerMaxJump = -100;
 
 let playerPositionX = parseInt(window.getComputedStyle(player).left);
 let playerPositionY = parseInt(window.getComputedStyle(player).top);
 let playerStartPosition = playerPositionY;
-
+console.log(playerPositionY);
 /*** Player Animation ***/
 
 
@@ -40,9 +40,10 @@ window.addEventListener('keydown', event => {
     if (event.code === jump) {
         document.getElementById('player-movement').className = 'player-movement player-jump';
 
-            playerPositionY = playerMaxJump;
+            playerPositionY = playerPositionY + playerMaxJump;
             player.style.top = `${playerPositionY}px`
-
+            playerPositionY = playerPositionY - playerMaxJump;
+            console.log(playerPositionY)
             setTimeout(jumpDown, 600);
 
 }
@@ -160,11 +161,11 @@ setInterval(() => {
 
         if (mushroom.position <= 0) {
             clearInterval(intervalId);
-            // mushroom.domElement.remove();
+            mushroom.domElement.remove();
         }
 
-    }, 1)}, 
-3000);
+    }, 10)}, 
+2000);
 
 
 // const addNewObstacle = () => {
