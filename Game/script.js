@@ -24,6 +24,7 @@ let playerMaxJump = -100;
 let playerPositionX = parseInt(window.getComputedStyle(player).left);
 let playerPositionY = parseInt(window.getComputedStyle(player).top);
 let playerStartPosition = playerPositionY;
+let isOnTheGround = true;
 console.log(playerPositionY);
 /*** Player Animation ***/
 
@@ -31,6 +32,7 @@ console.log(playerPositionY);
 const jumpDown = () => {
     player.style.top = `${playerStartPosition}px`
     document.getElementById('player-movement').className = 'player-movement player-run';
+    isOnTheGround = true;
 }
 
 
@@ -43,6 +45,7 @@ window.addEventListener('keydown', event => {
             playerPositionY = playerPositionY + playerMaxJump;
             player.style.top = `${playerPositionY}px`
             playerPositionY = playerPositionY - playerMaxJump;
+            isOnTheGround = false;
             console.log(playerPositionY)
             setTimeout(jumpDown, 600);
 
@@ -149,6 +152,10 @@ class Mushroom {
     move = () => {
         this.position = this.position - 5;
         this.domElement.style.left = `${this.position}px`;
+
+        if (this.position === playerStartPosition && isOnTheGround) { 
+            console.log('trafiony')
+        }
     }
 }
 
