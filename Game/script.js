@@ -126,20 +126,23 @@ const generateRandomObstacleType = () => {
     
 }
 
-intervalId = setInterval(() => {
-    addNewObstacle();
-  }, 1500);
+// intervalId = setInterval(() => {
+//     addNewObstacle();
+//   }, 1500);
 
 const addNewObstacle = () => {
 const obstacle = document.createElement('div');
 
 obstacle.classList.add(obstaclesType[generateRandomObstacleType()]);
+obstacle.style.right = "10%";
 
 backgroundWorld.appendChild(obstacle);
 
-setTimeout(() => {
-    obstacle.remove();
-  }, 8000)
+
+
+// setTimeout(() => {
+//     obstacle.remove();
+//   }, 8000)
 };
 
 
