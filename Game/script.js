@@ -155,6 +155,7 @@ class Mushroom {
 
         if (this.position === playerStartPosition && isOnTheGround) { 
             console.log('trafiony')
+            document.querySelector('#progres').value -= 20;
         }
     }
 }
