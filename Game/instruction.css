@@ -52,8 +52,26 @@
     
 }
 
+.player-name-field {
+    padding: 0.5rem;
+    font-size: 1rem;
+    font-family: 'Staatliches', cursive;
+    letter-spacing: 0.2rem;
+    width: 20%;
+}
+
+.player-name-field::placeholder {
+  font-family: 'Staatliches', cursive;
+  letter-spacing: 0.2rem;
+}
+.player-name-field:focus{
+  outline: none;
+}
+
+
 .mainHero__button {
     background: #fe466a;
+    border: none;
     color: var(--color-font-light);
     font-family: var(--font-header);
     font-weight: bold;
@@ -68,9 +86,17 @@
     text-decoration: none;
     animation: text 700ms ease-in-out infinite alternate;
   }
-  
+
+  .game-link:visited {
+    color: var(--color-font-light);
+  }
+
   .mainHero__button:hover {
     box-shadow: 0 0 0;
+  }
+
+  .game-link:active {
+    color: var(--color-font-light);
   }
   
   .shape {

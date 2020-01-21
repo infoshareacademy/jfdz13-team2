@@ -19,18 +19,20 @@ const playerHeight = parseInt(window.getComputedStyle(player).height);
 
 let playerSpeedX = 0;
 let playerSpeedY = 0;
-let playerMaxJump = 600;
+let playerMaxJump = -100;
 
 let playerPositionX = parseInt(window.getComputedStyle(player).left);
 let playerPositionY = parseInt(window.getComputedStyle(player).top);
 let playerStartPosition = playerPositionY;
-
+let isOnTheGround = true;
+console.log(playerPositionY);
 /*** Player Animation ***/
 
 
 const jumpDown = () => {
     player.style.top = `${playerStartPosition}px`
     document.getElementById('player-movement').className = 'player-movement player-run';
+    isOnTheGround = true;
 }
 
 
@@ -40,9 +42,11 @@ window.addEventListener('keydown', event => {
     if (event.code === jump) {
         document.getElementById('player-movement').className = 'player-movement player-jump';
 
-            playerPositionY = playerMaxJump;
+            playerPositionY = playerPositionY + playerMaxJump;
             player.style.top = `${playerPositionY}px`
-
+            playerPositionY = playerPositionY - playerMaxJump;
+            isOnTheGround = false;
+            console.log(playerPositionY)
             setTimeout(jumpDown, 600);
 
 }
@@ -130,41 +134,89 @@ const generateRandomObstacleType = () => {
 //     addNewObstacle();
 //   }, 1500);
 
-const addNewObstacle = () => {
-const obstacle = document.createElement('div');
+// let mushroomStartPosition = obstacle.style.left = `${worldWidth - 100}px`;
+class Mushroom {
+    position = worldWidth - 100;
+    domElement = null;
 
-obstacle.classList.add(obstaclesType[generateRandomObstacleType()]);
-obstacle.style.right = "10%";
+    initilize = () => {
+        const obstacle = document.createElement('div');
+        obstacle.classList.add(obstaclesType[generateRandomObstacleType()]);
+        obstacle.style.left = `${this.position}px`;
 
-backgroundWorld.appendChild(obstacle);
+        backgroundWorld.appendChild(obstacle);
+
+        this.domElement = obstacle;
+    }
+
+    move = () => {
+        this.position = this.position - 5;
+        this.domElement.style.left = `${this.position}px`;
+
+        if (this.position === playerStartPosition && isOnTheGround) { 
+            console.log('trafiony')
+            document.querySelector('#progres').value -= 20;
+        }
+    }
+}
+
+setInterval(() => {
+    const mushroom = new Mushroom();
+    mushroom.initilize()
+    
+    const intervalId = setInterval(() => {
+        mushroom.move();
+
+        if (mushroom.position <= 0) {
+            clearInterval(intervalId);
+            mushroom.domElement.remove();
+        }
+
+    }, 10)}, 
+2000);
 
 
+// const addNewObstacle = () => {
+//     const obstacle = document.createElement('div');
+
+//     obstacle.classList.add(obstaclesType[generateRandomObstacleType()]);
+
+//     obstacle.style.left = `${MUSHROOM_POSITION}px`
+
+//     backgroundWorld.appendChild(obstacle);
+
+//     setInterval(() => {
+//         MUSHROOM_POSITION = MUSHROOM_POSITION - 1;
+//         obstacle.style.left = `${MUSHROOM_POSITION}px`
+//     }, 1)
+// }
+
+// addNewObstacle();
+
+const movingMushroom = () => {
+
+}
 
 // setTimeout(() => {
 //     obstacle.remove();
 //   }, 8000)
-};
+// };
 
 
 /*** Score ***/
 
 let score = 0;
-const scoreElement = document.createElement('h2');
+const scoreElement = document.createElement('h1');
 scoreElement.innerText = score;
 document.querySelector('.score-container').appendChild(scoreElement);
 
 
 const increaseScore = () => {
-    let seconds = 59;
+    let seconds = 0;
     const intervalId = setInterval(function() {
-        if (seconds === 0) {
-            clearInterval(intervalId);
-        }
-        seconds--;
+        seconds++;
         score += 50;
         scoreElement.innerText = score;
-        
-  
     }, 1000)
 };
 
