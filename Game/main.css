@@ -26,16 +26,8 @@
     height: 100vh;
     background-image:   
                         url(images/parallax_background/01_ground.png),
-                        url(images/parallax_background/02_trees\ and\ bushes.png),  
-                        url(images/parallax_background/03_distant_trees.png), 
-                        url(images/parallax_background/04_bushes.png),
-                        url(images/parallax_background/05_hill1.png),
-                        url(images/parallax_background/06_hill2.png),
-                        url(images/parallax_background/07_huge_clouds.png),
                         url(images/parallax_background/08_clouds.png),
-                        url(images/parallax_background/09_distant_clouds1.png),
-                        url(images/parallax_background/10_distant_clouds.png),
-                        url(images/parallax_background/11_background.png);
+                        url(images/parallax_background/background_still.png);
                         
     background-size: 100vw 100%;
     background-position: 0px 0px;
@@ -46,17 +38,9 @@
 @keyframes goLeft {
     100%{
         background-position:        
-                                -2000vw 0px,
-                                -600vw 0px,
-                                -300vw 0px,
-                                -300vw 0px,
-                                0vw 0px, 
+                                -1700vw 0px, 
                                 0vw 0px,
-                                50vw 0px,
-                                50vw 0px,
-                                100vw 0px,
-                                200vw 0px,
-                                300vw 0px;
+                                -300vw 0px;
     }
 }
 .game-container {
@@ -181,6 +165,32 @@
     overflow: hidden;
     bottom: var(--obstaclePosition);
     /* animation: goMushrooms 8s linear infinite; */
+}
+
+.mushroom5 {
+    background: url(images/obstacles/mushroom05.png);
+    position: absolute;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 60px;
+    height: 60px;
+    align-self: flex-end;
+    overflow: hidden;
+    bottom: var(--obstaclePosition);
+    /* animation: goMushrooms 8s linear infinite; */
+}
+
+.mushroom6 {
+    background: url(images/obstacles/mushroom06.png);
+    position: absolute;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 60px;
+    height: 60px;
+    align-self: flex-end;
+    overflow: hidden;
+    bottom: var(--obstaclePosition);
+    /* animation: goMushrooms 8s linear infinite; */    
 }
 
 @keyframes goMushrooms {

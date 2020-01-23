@@ -122,11 +122,11 @@ window.addEventListener('keydown', event => {
 // Obstacles animation //
 
 
-const obstaclesType = ['mushroom1', 'mushroom2', 'mushroom3', 'mushroom4']
+const obstaclesType = ['mushroom1', 'mushroom2', 'mushroom3', 'mushroom4', 'mushroom5', 'mushroom6']
 
 const generateRandomObstacleType = () => {
   
-    return Math.floor(Math.random() *4);
+    return Math.floor(Math.random() *6);
     
 }
 

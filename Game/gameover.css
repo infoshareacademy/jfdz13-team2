@@ -31,8 +31,8 @@
     text-align: center;
     }
 
-/* .instruction-container {
-    padding: 20px;
+/* .game-over__container {
+    width: 100vw;
 } */
 
 .game-over__title {
@@ -47,7 +47,18 @@
     letter-spacing: 0.4rem;   
 }
 
-.game-over__text {
+.game-over__subtitle {
+    
+  font-size: 2.5rem;
+  
+}
+
+.game-over__ranking {
+  display: inline-block;
+  text-align: center;
+}
+
+.game-over__position {
     font-size: 2rem;
     
 }
@@ -68,6 +79,10 @@
   outline: none;
 }
 
+.buttons {
+  display: inline;
+  
+}
 
 .mainHero__button {
     background: #fe466a;
@@ -106,6 +121,7 @@
   .mainHero__buttonText {
     display: inline-block;
     transform: skew(20deg);
+    font-size: 1.2rem;
   }
   
   .mainHero__content {
