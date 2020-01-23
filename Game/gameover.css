@@ -1,0 +1,157 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --color-primary: #041256;
+    --color-light: #1345E4;
+    --color-dark: #06219E;
+    --color-font-light: #E9E9EC;
+    --color-font-border: #D08A59;
+    --color-button: #D64A17;
+  
+    --font-header: 'Coda Caption', sans-serif;
+    --font-body: 'Marvel', sans-serif;
+    
+    --gutter: 1rem;
+  }
+
+.game-over {
+    display: flex;
+    background-color: #01091C;
+    color: var(--color-font-light);
+    font-family: var(--font-header);
+    height: 100vh;
+    width: 100vw;
+    align-items: center;
+    justify-content: center;
+    line-height: 4rem;
+    text-align: center;
+    }
+
+/* .instruction-container {
+    padding: 20px;
+} */
+
+.game-over__title {
+    font-size: 6vw;
+    padding-bottom: 4rem;
+    padding-top: 10%;
+    color: transparent;
+    -webkit-text-stroke: 1px var(--color-font-light);
+    font-family: 'Staatliches', cursive;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 0.4rem;   
+}
+
+.game-over__text {
+    font-size: 2rem;
+    
+}
+
+.player-name-field {
+    padding: 0.5rem;
+    font-size: 1rem;
+    font-family: 'Staatliches', cursive;
+    letter-spacing: 0.2rem;
+    width: 20%;
+}
+
+.player-name-field::placeholder {
+  font-family: 'Staatliches', cursive;
+  letter-spacing: 0.2rem;
+}
+.player-name-field:focus{
+  outline: none;
+}
+
+
+.mainHero__button {
+    background: #fe466a;
+    border: none;
+    color: var(--color-font-light);
+    font-family: var(--font-header);
+    font-weight: bold;
+    box-shadow: 5px 0px 20px #892238;
+    display: block;
+    max-width: 14rem;
+    margin: 7% auto 0;
+    font-size: 1.4rem;
+    text-align: center;
+    text-transform: uppercase;
+    padding: .5em 2em;
+    text-decoration: none;
+    animation: text 700ms ease-in-out infinite alternate;
+  }
+
+  .game-link:visited {
+    color: var(--color-font-light);
+  }
+
+  .mainHero__button:hover {
+    box-shadow: 0 0 0;
+  }
+
+  .game-link:active {
+    color: var(--color-font-light);
+  }
+  
+  .shape {
+    transform: skew(-20deg);
+  }
+  
+  .mainHero__buttonText {
+    display: inline-block;
+    transform: skew(20deg);
+  }
+  
+  .mainHero__content {
+    font-size: 1rem;
+  }
+  
+  @keyframes text {
+    from {
+      color: var(--color-font-light);
+    }
+  
+    to {
+      color: transparent;
+    }
+  }
+  .player {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    align-self: flex-end;
+    overflow: hidden;
+    left: 25%;
+    bottom: 7%;  
+
+}
+/**** Player Animation ****/
+
+.player-movement {
+    position: relative;
+    animation: movement 3s steps(15) forwards alternate;
+    width: 3000px;
+    height: 1000px;
+}
+
+.player-fall {
+    top: 0px;
+}
+
+
+@keyframes movement {
+    from {
+        transform: translate3d(0px,0,0)
+    }
+    to {
+        transform: translate3d(-100%,0,0);
+        
+    }
+    
+}
