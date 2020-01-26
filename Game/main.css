@@ -1,0 +1,124 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --color-primary: #041256;
+    --color-light: #1345E4;
+    --color-dark: #06219E;
+    --color-font-light: #E9E9EC;
+    --color-font-border: #D08A59;
+    --color-button: #D64A17;
+  
+    --font-header: 'Coda Caption', sans-serif;
+    --font-body: 'Marvel', sans-serif;
+    
+    --gutter: 1rem;
+  }
+
+.background-container {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    background-image:   
+                        url(images/parallax_background/01_ground.png),
+                        url(images/parallax_background/02_trees\ and\ bushes.png),  
+                        url(images/parallax_background/03_distant_trees.png), 
+                        url(images/parallax_background/04_bushes.png),
+                        url(images/parallax_background/05_hill1.png),
+                        url(images/parallax_background/06_hill2.png),
+                        url(images/parallax_background/07_huge_clouds.png),
+                        url(images/parallax_background/08_clouds.png),
+                        url(images/parallax_background/09_distant_clouds1.png),
+                        url(images/parallax_background/10_distant_clouds.png),
+                        url(images/parallax_background/11_background.png);
+                        
+    background-size: 100vw 100%;
+    background-position: 0px 0px;
+    animation: goLeft 200s linear infinite;
+}
+
+@keyframes goLeft {
+    100%{
+        background-position:        
+                                0vw 0px,
+                                0vw 0px,
+                                0vw 0px,
+                                0vw 0px,
+                                0vw 0px, 
+                                0vw 0px,
+                                -200vw 0px,
+                                -200vw 0px,
+                                -400vw 0px,
+                                -500vw 0px,
+                                -600vw 0px;
+    }
+}
+.game-container {
+    position: absolute;
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    padding: 20px;
+    background-color: var(--color-primary);
+    overflow: hidden;
+}
+
+.world {
+    position: relative;
+    display: flex;
+    width: 10000px;
+    height: 100%;
+    background-color: var(--color-light);
+}
+
+.player {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    align-self: flex-end;
+    overflow: hidden;   
+}
+
+/**** Player Animation ****/
+
+.player-movement {
+    position: relative;
+    animation: movement 1s steps(15) infinite;
+    width: 3000px;
+    height: 1000px;
+}
+
+.player-fall {
+    top: 0px;
+}
+
+.player-idle {
+    top: -200px;
+}
+
+.player-jump {
+    top: -400px;
+}
+
+.player-run {
+    top: -600px;
+}
+
+.player-walk {
+    top: -800px;
+}
+
+.player-down {
+    top: -200px;
+}
+@keyframes movement {
+    from {
+        transform: translate3d(0px,0,0)
+    }
+    to {
+        transform: translate3d(-100%,0,0);
+    }
+}

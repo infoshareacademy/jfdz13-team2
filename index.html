@@ -35,8 +35,8 @@
 
         <div class="nav-links">
             <a href="#">Home</a>
-            <a href="#team">Team</a>
             <a href="#ourApp">Our App</a>
+            <a href="#team">Team</a>
             <a href="#form">Contact Us</a>
         </div>
 
@@ -232,26 +232,26 @@
         <h1>Contact us</h1>
       </div>
         <div class="wrapper">
-            <div class="contact-form">
+            <form class="contact-form">
                 <div class="input-fields">
-                    <input type="text" class="input" placeholder="Name">
-                    <input type="email" class="input" placeholder="Email Address">
+                    <input type="text" class="input" placeholder="Name" required>
+                    <input type="email" class="input" placeholder="Email Address" required>
                     <input type="text" class="input" placeholder="Subject">
                 </div>
                 <div class="msg">
                     <textarea placeholder="Message"></textarea>
-                    <div class="btn-msg">Send</div>
+                    <button class="btn-msg" type="submit">Send</button>
                 </div>
                 <div class="gdpr">
                     <label class="gdpr__label">
-                        <input type="checkbox" class="gdpr__checkbox">  We will use your email only once - to inform you
+                        <input type="checkbox" class="gdpr__checkbox" required>  We will use your email only once - to inform you
                         about the premiere
                     </label>
 
                     <label class="gdpr__label">
-                        <input type="checkbox" class="gdpr__checkbox">  Your data is protected by the GDPR regulations
+                        <input type="checkbox" class="gdpr__checkbox" required>  Your data is protected by the GDPR regulations
                     </label>
-                </div>
+                </form>
             </div>
         </div>
     </section>
