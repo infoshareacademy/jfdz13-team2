@@ -21,6 +21,7 @@ let playerPositionY = parseInt(window.getComputedStyle(player).top);
 let playerStartPosition = playerPositionY;
 
 let isOnTheGround = true;
+let gameEnd = false;
 
 console.log(playerPositionY);
 /*** Player Animation ***/
