@@ -212,7 +212,7 @@ html {
 }
 
 .mainHero__logo {
-  margin: 9rem 5% 5%;
+  margin: 15% 5% 5%;
 }
 
 .mainHero__button {
@@ -317,7 +317,7 @@ html {
 /*** Functions ***/
 
 .mainFunctions__container {
-  height: 50vw;
+  height: 100vh;
   width: 100%;
 
   display: flex;
@@ -337,6 +337,7 @@ html {
   font-size: 6vw;
   text-align: right;
   color: var(--color-light);
+  margin-top: 5rem;
   
 }
 
@@ -423,7 +424,6 @@ html {
 @media (max-width: 1024px) {
 
   .mainFunctions__container {
-    height: 120vw;
     background: url(photos/running3.jpg) no-repeat top left;
     background-size: cover;
     
@@ -511,7 +511,7 @@ html {
     font-size: 6vw;
     font-family: 'Staatliches', cursive;
     letter-spacing: 0.5vw;
-    margin-top: 3rem;
+    margin-top: 5rem;
     justify-content: space-around;
 }
 
@@ -651,7 +651,6 @@ html {
 
   .team__headline--header {
       font-size: 2rem;
-      margin-top: 20px;
   }
 
   .team__headline--paragraph {
