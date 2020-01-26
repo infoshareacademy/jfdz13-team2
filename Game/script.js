@@ -8,12 +8,7 @@ const worldHeight = parseInt(window.getComputedStyle(world).height);
 
 /*** Player ***/
 const player = document.querySelector('#player');
-const run = 'ArrowRight';
-const walk = 'ArrowLeft';
 const jump = 'ArrowUp';
-const down = 'ArrowDown';
-const kick = 'Space';
-const fast = 'KeyF';
 const playerWidth = parseInt(window.getComputedStyle(player).width);
 const playerHeight = parseInt(window.getComputedStyle(player).height);
 
@@ -24,7 +19,9 @@ let playerMaxJump = -100;
 let playerPositionX = parseInt(window.getComputedStyle(player).left);
 let playerPositionY = parseInt(window.getComputedStyle(player).top);
 let playerStartPosition = playerPositionY;
+
 let isOnTheGround = true;
+
 console.log(playerPositionY);
 /*** Player Animation ***/
 
@@ -51,72 +48,9 @@ window.addEventListener('keydown', event => {
 
 }
         
-    // if (event.code === run) {
-    //     document.getElementById('player-movement').className = 'player-movement player-run';
-    //     if (playerPositionX + playerWidth + playerSpeedX <= worldWidth) {
-    //         playerPositionX += playerSpeedX;
-    //         player.style.left = `${playerPositionX}px`;   
-    //     }else{
-    //         player.style.left = `${playerPositionX}px`;
-    //     } 
-    // }
-    /*Plynna animacja*/
-    /*if (event.code === 'KeyN') {
-        let start = Date.now();
-        let playerPossition = parseInt(window.getComputedStyle(player).left);
-        player.style.left = playerPossition;
-        let timer2 = setInterval(function() {
-            let timePassed2 = Date.now() - start;
-            mummy.style.left = (mummyPossitionAnimationback - (timePassed2 / 5)) + 'px';
-            if (timePassed2 > 500) clearInterval(timer2);
-        }, 10);
-    }*/
-
-    // if (event.code === walk) {
-    //     document.getElementById('player-movement').className = 'player-movement player-walk';
-    //     player.style.transform = 'scaleX(-1)';
-    //     if (playerPositionX >= playerSpeedX) {
-    //         playerPositionX -= playerSpeedX;
-    //         player.style.left = `${playerPositionX}px`;   
-    //     }else{
-    //         player.style.left = `${playerPositionX}px`;
-    //     } 
-    // }
-    
-
-        // if (playerPositionY >= playerSpeedY) {
-        //     playerPositionY -= playerSpeedY;
-        //     player.style.top = `${playerPositionY}px`;
-        // }else{
-        //     player.style.top = `${playerPositionY}px`;
-        // }
-    
-    // if (event.code === down) {
-    //     document.getElementById('player-movement').className = 'player-movement player-down';
-    //     if (playerPositionY + playerHeight + playerSpeedY <= worldHeight) {
-    //         playerPositionY += playerSpeedY;
-    //         player.style.top = `${playerPositionY}px`;
-    //     }else{
-    //         player.style.top = `${playerPositionY}px`;
-    //     }
-    // }
-    // if (event.code === kick) {
-    //     document.getElementById('player-movement').className = 'player-movement player-jump';
-    // }
 });
 
-// window.addEventListener('keyup', event => {
-    
-//     // if ((event.code === run) || (event.code === walk) || (event.code === jump) || (event.code === kick)) {
-        
-//         player.style.top = `${playerStartPosition}px`
-//         document.getElementById('player-movement').className = 'player-movement player-run';
 
-//     // }
-//     // if (event.code === walk) {
-//     //     player.style.transform = '';
-//     // }
-// });
 
 
 // Obstacles animation //
@@ -130,9 +64,6 @@ const generateRandomObstacleType = () => {
     
 }
 
-// intervalId = setInterval(() => {
-//     addNewObstacle();
-//   }, 1500);
 
 // let mushroomStartPosition = obstacle.style.left = `${worldWidth - 100}px`;
 class Mushroom {
@@ -143,6 +74,7 @@ class Mushroom {
         const obstacle = document.createElement('div');
         obstacle.classList.add(obstaclesType[generateRandomObstacleType()]);
         obstacle.style.left = `${this.position}px`;
+        obstacle.style.top = `${playerPositionY + (playerHeight /2)}px`;
 
         backgroundWorld.appendChild(obstacle);
 
@@ -153,10 +85,18 @@ class Mushroom {
         this.position = this.position - 5;
         this.domElement.style.left = `${this.position}px`;
 
-        if (this.position === playerStartPosition && isOnTheGround) { 
+        
+    }
+
+    checkCollision = () =>{
+        if (this.position <= playerStartPosition && isOnTheGround) { 
             console.log('trafiony')
             document.querySelector('#progres').value -= 20;
+            this.domElement.remove();
+            return true 
         }
+
+        return false
     }
 }
 
@@ -167,29 +107,16 @@ setInterval(() => {
     const intervalId = setInterval(() => {
         mushroom.move();
 
-        if (mushroom.position <= 0) {
+        if (mushroom.checkCollision() || mushroom.position <= 0){
             clearInterval(intervalId);
             mushroom.domElement.remove();
         }
+
 
     }, 10)}, 
 2000);
 
 
-// const addNewObstacle = () => {
-//     const obstacle = document.createElement('div');
-
-//     obstacle.classList.add(obstaclesType[generateRandomObstacleType()]);
-
-//     obstacle.style.left = `${MUSHROOM_POSITION}px`
-
-//     backgroundWorld.appendChild(obstacle);
-
-//     setInterval(() => {
-//         MUSHROOM_POSITION = MUSHROOM_POSITION - 1;
-//         obstacle.style.left = `${MUSHROOM_POSITION}px`
-//     }, 1)
-// }
 
 // addNewObstacle();
 
@@ -197,10 +124,6 @@ const movingMushroom = () => {
 
 }
 
-// setTimeout(() => {
-//     obstacle.remove();
-//   }, 8000)
-// };
 
 
 /*** Score ***/

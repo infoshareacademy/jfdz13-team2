@@ -124,7 +124,7 @@
     height: 60px;
     align-self: flex-end;
     overflow: hidden;
-    bottom: var(--obstaclePosition);
+    /* bottom: var(--obstaclePosition); */
     /* animation: goMushrooms 8s linear infinite; */
 }
 
@@ -137,7 +137,7 @@
     height: 60px;
     align-self: flex-end;
     overflow: hidden;
-    bottom: var(--obstaclePosition);
+    /* bottom: var(--obstaclePosition); */
     /* animation: goMushrooms 8s linear infinite; */
 }
 
@@ -150,7 +150,7 @@
     height: 60px;
     align-self: flex-end;
     overflow: hidden;
-    bottom: var(--obstaclePosition);
+    /* bottom: var(--obstaclePosition); */
     /* animation: goMushrooms 8s linear infinite; */
 }
 
@@ -163,7 +163,7 @@
     height: 60px;
     align-self: flex-end;
     overflow: hidden;
-    bottom: var(--obstaclePosition);
+    /* bottom: var(--obstaclePosition); */
     /* animation: goMushrooms 8s linear infinite; */
 }
 
@@ -176,7 +176,7 @@
     height: 60px;
     align-self: flex-end;
     overflow: hidden;
-    bottom: var(--obstaclePosition);
+    /* bottom: var(--obstaclePosition); */
     /* animation: goMushrooms 8s linear infinite; */
 }
 
@@ -189,7 +189,7 @@
     height: 60px;
     align-self: flex-end;
     overflow: hidden;
-    bottom: var(--obstaclePosition);
+    /* bottom: var(--obstaclePosition); */
     /* animation: goMushrooms 8s linear infinite; */    
 }
 
