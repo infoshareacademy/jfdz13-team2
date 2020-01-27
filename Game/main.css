@@ -78,9 +78,12 @@
     position: relative;
     animation: movement 1s steps(15) infinite;
     width: 1800px;
-    height: 160px;
+    height: 360px;
 }
 .player-run {
+    top: -180px;
+}
+.player-jump {
     top: 0px;
 }
 @keyframes movement {
