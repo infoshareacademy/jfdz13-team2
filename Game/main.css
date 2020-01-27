@@ -62,12 +62,12 @@
 
 .player {
     position: absolute;
-    width: 200px;
-    height: 200px;
+    width: 120px;
+    height: 180px;
     align-self: flex-end;
-    overflow: hidden;  
+    overflow: hidden;
     left: 25%;
-    bottom: 50px; 
+    bottom: 50px;
 }
 
 
@@ -77,32 +77,11 @@
 .player-movement {
     position: relative;
     animation: movement 1s steps(15) infinite;
-    width: 3000px;
-    height: 1000px;
+    width: 1800px;
+    height: 160px;
 }
-
-.player-fall {
-    top: 0px;
-}
-
-.player-idle {
-    top: -200px;
-}
-
-.player-jump {
-    top: -400px;
-}
-
 .player-run {
-    top: -600px;
-}
-
-.player-walk {
-    top: -800px;
-}
-
-.player-down {
-    top: -200px;
+    top: 0px;
 }
 @keyframes movement {
     from {
