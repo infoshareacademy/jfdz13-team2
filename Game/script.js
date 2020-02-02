@@ -19,9 +19,19 @@ let playerMaxJump = -100;
 let playerPositionX = parseInt(window.getComputedStyle(player).left);
 let playerPositionY = parseInt(window.getComputedStyle(player).top);
 let playerStartPosition = playerPositionY;
+let playerLife  = 100;
 
 let isOnTheGround = true;
 let gameEnd = false;
+
+// const stopGame = () => {
+//     if (gameEnd = true) {
+//         clearInterval(initializeInterval);
+//         clearInterval(moveInterval);
+//         clearInterval(scoreInterval);
+//         window.location = "gameover.html"
+//     } 
+// }
 
 console.log(playerPositionY);
 /*** Player Animation ***/
@@ -93,7 +103,12 @@ class Mushroom {
         if (this.position <= playerStartPosition && isOnTheGround) { 
             console.log('trafiony')
             document.querySelector('#progres').value -= 20;
+            playerLife -= 20;
             this.domElement.remove();
+            if (playerLife <= 0) {
+                clearInterval(initializeInterval);
+                window.location = 'gameover.html';
+            }
             return true 
         }
 
@@ -101,16 +116,20 @@ class Mushroom {
     }
 }
 
-setInterval(() => {
+const initializeInterval = setInterval(() => {
     const mushroom = new Mushroom();
     mushroom.initilize()
     
-    const intervalId = setInterval(() => {
+    const moveInterval = setInterval(() => {
         mushroom.move();
 
-        if (mushroom.checkCollision() || mushroom.position <= 0){
-            clearInterval(intervalId);
+        if (mushroom.checkCollision() || mushroom.position <= 0 || playerLife <= 0){
+            clearInterval(moveInterval);
             mushroom.domElement.remove();
+        }
+
+        if (playerLife <= 0){
+            clearInterval(moveInterval);
         }
 
 
@@ -137,10 +156,14 @@ document.querySelector('.score-container').appendChild(scoreElement);
 
 const increaseScore = () => {
     let seconds = 0;
-    const intervalId = setInterval(function() {
+    const scoreInterval = setInterval(function() {
+        if (playerLife <= 0){
+            clearInterval(scoreInterval)
+        } else {
         seconds++;
         score += 50;
         scoreElement.innerText = score;
+        }
     }, 1000)
 };
 
