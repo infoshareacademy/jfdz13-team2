@@ -251,6 +251,28 @@ html {
   font-size: 1rem;
 }
 
+.dots__content {
+  justify-content: center;
+  display: flex;
+}
+
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 5px;
+  background-color: #bbb;
+  opacity: 0.7;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+  
+/* .dot:hover {
+  background-color: #717171;
+} */
+
+
 @keyframes text {
   from {
     color: var(--color-font-light);
@@ -300,6 +322,10 @@ html {
     margin: 5%;
     max-width: 50%;
   }
+  
+  .mainHero__logo:hover {
+  animation: shake 0.5s infinite;
+  }
 
   .mainHero__button {
     margin: 5% 5% 10% 0;
@@ -313,6 +339,10 @@ html {
   .mainHero__content {
     margin-top: 0;
 
+  }
+
+  .dots__content {
+    margin: 5% 5% 0;
   }
 
 }
@@ -635,6 +665,24 @@ html {
     width: 30vw;
     height: 15vw;
     margin: 35% 0 0 0;
+}
+
+.team__member--logo h2:hover {
+  animation: shake 0.5s infinite;
+}
+
+@keyframes shake {
+  0% { transform: translate(1px, 1px) rotate(0deg); }
+  10% { transform: translate(-1px, -2px) rotate(-1deg); }
+  20% { transform: translate(-3px, 0px) rotate(1deg); }
+  30% { transform: translate(3px, 2px) rotate(0deg); }
+  40% { transform: translate(1px, -1px) rotate(1deg); }
+  50% { transform: translate(-1px, 2px) rotate(-1deg); }
+  60% { transform: translate(-3px, 1px) rotate(0deg); }
+  70% { transform: translate(3px, 1px) rotate(-1deg); }
+  80% { transform: translate(-1px, -1px) rotate(1deg); }
+  90% { transform: translate(1px, 2px) rotate(0deg); }
+  100% { transform: translate(1px, -2px) rotate(-1deg); }
 }
 
 /*** Team media ***/

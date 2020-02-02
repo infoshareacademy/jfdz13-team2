@@ -3,6 +3,10 @@ let activeHeroImage = 0;
 const imgHtml = document.querySelector('.mainHero');
 const imgHtml1024px = document.querySelector('.mainHero__container');
 const titleHtml = document.querySelectorAll('.mainHero__title');
+const firstDot = document.querySelector('.firstSlide');
+const secondDot = document.querySelector('.secondSlide');
+const thirdDot = document.querySelector('.thirdSlide');
+const dotArray = [firstDot, secondDot, thirdDot];
 
 const changeHeroImages = () => {
   activeHeroImage++;
@@ -24,5 +28,20 @@ const changeHeroImages = () => {
 }
 
 setInterval(changeHeroImages, 4000);
+
+firstDot.addEventListener('click', () => {
+  imgHtml.style.backgroundImage = heroImages[0];
+  imgHtml1024px.style.backgroundImage = heroImages[0];
+})
+
+secondDot.addEventListener('click', () => {
+  imgHtml.style.backgroundImage = heroImages[1];
+  imgHtml1024px.style.backgroundImage = heroImages[1];
+})
+
+thirdDot.addEventListener('click', () => {
+  imgHtml.style.backgroundImage = heroImages[2];
+  imgHtml1024px.style.backgroundImage = heroImages[2];
+})
 
 
