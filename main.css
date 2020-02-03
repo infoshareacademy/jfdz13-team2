@@ -192,8 +192,8 @@ html {
 /*** Hero ***/
 
 .mainHero {
-  background-image: url(photos/heroImage.jpeg);
-  transition: 1s linear;
+  background-image: url(photos/slajd0.jpg);
+  transition: 500ms ease-in-out;
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -212,6 +212,10 @@ html {
   margin: 0 5%;
   text-align: center;
   font-size: 2rem;
+}
+
+.titleBorder {
+  -webkit-text-stroke: 1px #fe466a;
 }
 
 .mainHero__logo {
@@ -251,26 +255,35 @@ html {
   font-size: 1rem;
 }
 
-.dots__content {
+.mainHero__dotsNav {
   justify-content: center;
   display: flex;
+  margin: 5%;
 }
 
-.dot {
+.mainHero__dot {
   cursor: pointer;
   height: 15px;
   width: 15px;
   margin: 0 5px;
-  background-color: #bbb;
+  background-color: var(--color-font-light);
   opacity: 0.7;
   border-radius: 50%;
   display: inline-block;
-  transition: background-color 0.6s ease;
+  transition: background-color 0.4s ease;
 }
+
+.mainHero__dot:visited {
+  background-color: var(--color-font-light);
+} 
   
-/* .dot:hover {
-  background-color: #717171;
-} */
+.mainHero__dot:hover {
+  background-color: #fe466a;
+} 
+
+.currentDot {
+  background-color: #fe466a;
+}
 
 
 @keyframes text {
@@ -292,7 +305,7 @@ html {
   .mainHero__container {
     height: 100vh;
     width: 60%;
-    background-image: url(photos/heroImage.jpeg);
+    background-image: url(photos/slajd0.jpg);
     transition: 1s linear;
     background-repeat: no-repeat;
     background-position: center center;
@@ -313,9 +326,10 @@ html {
     font-size: 4rem;
     text-align: right;
     max-width: 60%;
+  }
 
-    /* -webkit-text-stroke: 1px var(--color-font-border); */
-
+  .titleBorder {
+    -webkit-text-stroke: 1px var(--color-font-light);
   }
 
   .mainHero__logo {
