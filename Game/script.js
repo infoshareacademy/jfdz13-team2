@@ -14,12 +14,12 @@ const playerHeight = parseInt(window.getComputedStyle(player).height);
 
 let playerSpeedX = 0;
 let playerSpeedY = 0;
-let playerMaxJump = -100;
+let playerMaxJump = -200;
 
 let playerPositionX = parseInt(window.getComputedStyle(player).left);
 let playerPositionY = parseInt(window.getComputedStyle(player).top);
 let playerStartPosition = playerPositionY;
-let playerLife  = 100;
+let playerLife = 100;
 
 let isOnTheGround = true;
 let gameEnd = false;
@@ -50,15 +50,15 @@ window.addEventListener('keydown', event => {
     if (event.code === jump) {
         document.getElementById('player-movement').className = 'player-movement player-jump';
 
-            playerPositionY = playerPositionY + playerMaxJump;
-            player.style.top = `${playerPositionY}px`
-            playerPositionY = playerPositionY - playerMaxJump;
-            isOnTheGround = false;
-            console.log(playerPositionY)
-            setTimeout(jumpDown, 600);
+        playerPositionY = playerPositionY + playerMaxJump;
+        player.style.top = `${playerPositionY}px`
+        playerPositionY = playerPositionY - playerMaxJump;
+        isOnTheGround = false;
+        console.log(playerPositionY)
+        setTimeout(jumpDown, 600);
 
-}
-        
+    }
+
 });
 
 
@@ -70,9 +70,9 @@ window.addEventListener('keydown', event => {
 const obstaclesType = ['mushroom1', 'mushroom2', 'mushroom3', 'mushroom4', 'mushroom5', 'mushroom6']
 
 const generateRandomObstacleType = () => {
-  
-    return Math.floor(Math.random() *6);
-    
+
+    return Math.floor(Math.random() * 6);
+
 }
 
 
@@ -85,7 +85,7 @@ class Mushroom {
         const obstacle = document.createElement('div');
         obstacle.classList.add(obstaclesType[generateRandomObstacleType()]);
         obstacle.style.left = `${this.position}px`;
-        obstacle.style.top = `${playerPositionY + (playerHeight /2)}px`;
+        obstacle.style.top = `${playerPositionY + (playerHeight / 2)}px`;
 
         backgroundWorld.appendChild(obstacle);
 
@@ -96,20 +96,20 @@ class Mushroom {
         this.position = this.position - 5;
         this.domElement.style.left = `${this.position}px`;
 
-        
+
     }
 
-    checkCollision = () =>{
-        if (this.position <= playerStartPosition && isOnTheGround) { 
+    checkCollision = () => {
+        if (this.position <= playerStartPosition && isOnTheGround) {
             console.log('trafiony')
             document.querySelector('#progres').value -= 20;
             playerLife -= 20;
             this.domElement.remove();
             if (playerLife <= 0) {
                 clearInterval(initializeInterval);
-                window.location = 'gameover.html';
+                window.location = 'gameover.html?score=' + score;
             }
-            return true 
+            return true
         }
 
         return false
@@ -119,22 +119,23 @@ class Mushroom {
 const initializeInterval = setInterval(() => {
     const mushroom = new Mushroom();
     mushroom.initilize()
-    
+
     const moveInterval = setInterval(() => {
         mushroom.move();
 
-        if (mushroom.checkCollision() || mushroom.position <= 0 || playerLife <= 0){
+        if (mushroom.checkCollision() || mushroom.position <= 0 || playerLife <= 0) {
             clearInterval(moveInterval);
             mushroom.domElement.remove();
         }
 
-        if (playerLife <= 0){
+        if (playerLife <= 0) {
             clearInterval(moveInterval);
         }
 
 
-    }, 10)}, 
-2000);
+    }, 10)
+},
+    2000);
 
 
 
@@ -156,13 +157,13 @@ document.querySelector('.score-container').appendChild(scoreElement);
 
 const increaseScore = () => {
     let seconds = 0;
-    const scoreInterval = setInterval(function() {
-        if (playerLife <= 0){
+    const scoreInterval = setInterval(function () {
+        if (playerLife <= 0) {
             clearInterval(scoreInterval)
         } else {
-        seconds++;
-        score += 50;
-        scoreElement.innerText = score;
+            seconds++;
+            score += 50;
+            scoreElement.innerText = score;
         }
     }, 1000)
 };
