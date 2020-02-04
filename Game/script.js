@@ -55,7 +55,7 @@ window.addEventListener('keydown', event => {
         playerPositionY = playerPositionY - playerMaxJump;
         isOnTheGround = false;
         console.log(playerPositionY)
-        setTimeout(jumpDown, 600);
+        setTimeout(jumpDown, 1500);
 
     }
 
@@ -115,6 +115,13 @@ class Mushroom {
         return false
     }
 }
+let intervalSpeed = 10;
+
+const lvlHarder = () => {
+}
+
+
+
 
 const initializeInterval = setInterval(() => {
     const mushroom = new Mushroom();
@@ -132,11 +139,11 @@ const initializeInterval = setInterval(() => {
             clearInterval(moveInterval);
         }
 
+    }, intervalSpeed )
 
-    }, 10)
+    
 },
     2000);
-
 
 
 // addNewObstacle();
