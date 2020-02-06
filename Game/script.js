@@ -55,7 +55,7 @@ window.addEventListener('keydown', event => {
         playerPositionY = playerPositionY - playerMaxJump;
         isOnTheGround = false;
         console.log(playerPositionY)
-        setTimeout(jumpDown, 1500);
+        setTimeout(jumpDown, 1000);
 
     }
 
@@ -100,7 +100,7 @@ class Mushroom {
     }
 
     checkCollision = () => {
-        if (this.position <= playerStartPosition && isOnTheGround) {
+        if (this.position <= playerPositionX && isOnTheGround) {
             console.log('trafiony')
             document.querySelector('#progres').value -= 20;
             playerLife -= 20;
@@ -136,7 +136,7 @@ const initializeInterval = setInterval(() => {
     } else if (score >= 7000 && score < 9000) {
         intervalSpeed = 2;
     }
-    
+
     const moveInterval = setInterval(() => {
         mushroom.move();
 
