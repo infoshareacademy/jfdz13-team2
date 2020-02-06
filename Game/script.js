@@ -127,6 +127,16 @@ const initializeInterval = setInterval(() => {
     const mushroom = new Mushroom();
     mushroom.initilize()
 
+    if (score >= 1000 && score < 3000) {
+        intervalSpeed = 8;
+    } else if (score >= 3000 && score < 5000) {
+        intervalSpeed = 6;
+    } else if (score >= 5000 && score < 7000) {
+        intervalSpeed = 4;
+    } else if (score >= 7000 && score < 9000) {
+        intervalSpeed = 2;
+    }
+    
     const moveInterval = setInterval(() => {
         mushroom.move();
 
