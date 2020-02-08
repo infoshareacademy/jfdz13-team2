@@ -92,51 +92,7 @@ dotsNav.addEventListener('click', e => {
   heroIndexInterval = setInterval(changeHeroImages, time);
 });
 
-/*** Cookies ***/
-​
-function setCookie(cookieName,cookieValue,exdays) {
-  const date = new Date();
-  date.setTime(date.getTime() + (exdays*24*60*60*1000));
-  const expires = "expires=" + date.toGMTString();
-  document.cookie = cookieName + "=" + cookieValue + ";" + expires + ";path=/";
-}
-function getCookie(cookieName) {
-  const name = cookieName + "=";
-  const decodedCookie = decodeURIComponent(document.cookie);
-  const ca = decodedCookie.split(';');
-  for(let i = 0; i < ca.length; i++) {
-    let c = ca[i];
-    while (c.charAt(0) == ' ') {
-      c = c.substring(1);
-    }
-    if (c.indexOf(name) == 0) {
-      return c.substring(name.length, c.length);
-    }
-  }
-  return "";
-}
-​
-const cookieInfo = document.querySelector(".cookie");
-const cookieYesBtn = document.querySelector(".cookie-btn-yes");
-const cookieNoBtn = document.querySelector(".cookie-btn-no");
-​
-const cookieShow = () => {
-  if (!document.cookie) {
-    cookieInfo.style.display = "block";
-​
-    cookieYesBtn.addEventListener("click", () => {
-      document.cookie = "Cookie = cookie";
-      cookieInfo.style.display = "none";
-    })
-​
-    cookieNoBtn.addEventListener("click", () => {
-      alert("Shame! Hope to see you again")
-      window.open("http://www.youtube.com/watch?v=tLTGs4fqxBk&t=0m6s");
-    })
-  }
-};
-cookieShow();
-​
+
 
 
 
