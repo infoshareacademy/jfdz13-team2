@@ -201,13 +201,23 @@ const increaseScore = () => {
 
 increaseScore();
 
+/***Bonus ***/
+
+const diamondsType = ['diamond1', 'diamond2', 'diamond3', 'diamond4'];
+
+const generateRandomNumber = () => {
+
+    return Math.floor(Math.random() * 4);
+
+}
+
 class Diamond {
     position = worldWidth - 100;
     domElement = null;
 
     initilize = () => {
         const bonus = document.createElement('div');
-        bonus.classList.add("diamond");
+        bonus.classList.add(diamondsType[generateRandomNumber()]);
         bonus.style.left = `${this.position}px`;
         bonus.style.top = `${playerPositionY - (playerHeight / 2)}px`;
 
@@ -224,14 +234,11 @@ class Diamond {
     }
 
     checkCollision = () => {
-        if (this.position <= playerPositionX && isOnTheGround) {
-            console.log('trafiony')
-            // document.querySelector('#progres').value -= 20;
-            score += 100;
+        if (this.position <= playerPositionX && !isOnTheGround) {
+            score += 105;
             this.domElement.remove();
             if (playerLife <= 0) {
                 clearInterval(bonusInterval);
-                // window.location = 'gameover.html?score=' + score;
             }
             return true
         }
