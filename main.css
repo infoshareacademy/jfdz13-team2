@@ -33,6 +33,53 @@ html {
 
 /*** Variables ***/
 
+/*** Cookies ***/
+​
+.cookie {
+    position: fixed;
+    bottom: 5%;
+    right: 5%;
+    z-index: 99;
+    background-color: rgb(204, 204, 204, 0.5);
+    display: none;
+    border: #fe466a solid 2px;
+    border-radius: 5px;
+    padding: 1rem;
+    width: 40rem;
+    font-family: var(--font-header);
+    color: var(--color-font-light);
+}
+
+@media (max-width:20rem)
+{
+  .cookie
+  {
+    width: 90%;
+    color: var(--color-font-light);
+    font-size: 75%;
+    bottom: 10%;
+    background-color: var(--color-light);
+  }
+}
+
+.cookie-btn, .cookie-btn:visited {
+    background: #39b7dd;
+    color: var(--color-font-light);
+    font-family: var(--font-header);
+    width: 5rem;
+    padding: 10px;
+    margin: 5px;
+    border-radius: 4px;
+    cursor: pointer;
+    border: none;
+}
+​
+.cookie-btn:hover, .cookie-btn:active {
+    background-color: #fe466a;
+    border-radius: 4px;
+    border: none;
+  }
+
 /*** Header ***/
 
 /*** Header ***/
