@@ -40,7 +40,12 @@ console.log(playerPositionY);
 const jumpDown = () => {
     player.style.top = `${playerStartPosition}px`
     document.getElementById('player-movement').className = 'player-movement player-run';
-    isOnTheGround = true;
+    
+   setTimeout(()=>{
+        isOnTheGround=true
+   },700)
+    
+    
 }
 
 
@@ -103,10 +108,17 @@ class Mushroom {
 
     checkCollision = () => {
         if (this.position <= playerPositionX && isOnTheGround) {
-            console.log('trafiony')
+            console.log('trafiony', isOnTheGround)
+
+            
             document.querySelector('#progres').value -= 20;
             playerLife -= 20;
             this.domElement.remove();
+
+
+
+
+
             if (playerLife <= 0) {
                 clearInterval(initializeInterval);
                 window.location = 'gameover.html?score=' + score;

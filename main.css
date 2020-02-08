@@ -33,6 +33,53 @@ html {
 
 /*** Variables ***/
 
+/*** Cookies ***/
+​
+.cookie {
+    position: fixed;
+    bottom: 5%;
+    right: 5%;
+    z-index: 99;
+    background-color: rgb(204, 204, 204, 0.5);
+    display: none;
+    border: #fe466a solid 2px;
+    border-radius: 5px;
+    padding: 1rem;
+    width: 40rem;
+    font-family: var(--font-header);
+    color: var(--color-font-light);
+}
+
+@media (max-width:20rem)
+{
+  .cookie
+  {
+    width: 90%;
+    color: var(--color-font-light);
+    font-size: 75%;
+    bottom: 10%;
+    background-color: var(--color-light);
+  }
+}
+
+.cookie-btn, .cookie-btn:visited {
+    background: #39b7dd;
+    color: var(--color-font-light);
+    font-family: var(--font-header);
+    width: 5rem;
+    padding: 10px;
+    margin: 5px;
+    border-radius: 4px;
+    cursor: pointer;
+    border: none;
+}
+​
+.cookie-btn:hover, .cookie-btn:active {
+    background-color: #fe466a;
+    border-radius: 4px;
+    border: none;
+  }
+
 /*** Header ***/
 
 /*** Header ***/
@@ -109,9 +156,9 @@ html {
 .active{
 	color: white;
 	background-color: rgba(100,100,100,1);
-	border-left: thick solid rgba(0,255,0,0.5);
+  border-left: 10px solid #fe466a;
+  border-radius: 30px;
 }
-
 
 
 @media (max-width:1024px) {
@@ -198,7 +245,10 @@ html {
 /*** Hero ***/
 
 .mainHero {
-  background: url(photos/heroImage.jpeg) no-repeat center center;
+  background-image: url(photos/slajd0.jpg);
+  transition: 500ms ease-in-out;
+  background-repeat: no-repeat;
+  background-position: center center;
   background-size: cover;
   display: flex;
   align-items: center;
@@ -209,7 +259,7 @@ html {
 
 .mainHero__title {
   color: transparent;
-  -webkit-text-stroke: 1px var(--color-font-light);
+  -webkit-text-stroke: 1px #fe466a;
   font-family: 'Staatliches', cursive;
   text-transform: uppercase;
   margin: 0 5%;
@@ -217,8 +267,12 @@ html {
   font-size: 2rem;
 }
 
+.titleBorder {
+  -webkit-text-stroke: 1px #fe466a;
+}
+
 .mainHero__logo {
-  margin: 9rem 5% 5%;
+  margin: 15% 5% 5%;
 }
 
 .mainHero__button {
@@ -254,6 +308,37 @@ html {
   font-size: 1rem;
 }
 
+.mainHero__dotsNav {
+  justify-content: center;
+  display: flex;
+  margin: 5%;
+}
+
+.mainHero__dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 5px;
+  background-color: var(--color-font-light);
+  opacity: 0.7;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.4s ease;
+}
+
+.mainHero__dot:visited {
+  background-color: var(--color-font-light);
+} 
+  
+.mainHero__dot:hover {
+  background-color: #fe466a;
+} 
+
+.currentDot {
+  background-color: #fe466a;
+}
+
+
 @keyframes text {
   from {
     color: var(--color-font-light);
@@ -273,7 +358,10 @@ html {
   .mainHero__container {
     height: 100vh;
     width: 60%;
-    background: url(photos/heroImage.jpeg) no-repeat center center;
+    background-image: url(photos/slajd0.jpg);
+    transition: 1s linear;
+    background-repeat: no-repeat;
+    background-position: center center;
     background-size: cover;
   }
 
@@ -288,17 +376,19 @@ html {
   }
 
   .mainHero__title {
+    -webkit-text-stroke: 1px var(--color-font-light);
     font-size: 4rem;
     text-align: right;
     max-width: 60%;
-
-    /* -webkit-text-stroke: 1px var(--color-font-border); */
-
   }
 
   .mainHero__logo {
     margin: 5%;
     max-width: 50%;
+  }
+  
+  .mainHero__logo:hover {
+  animation: shake 0.5s infinite;
   }
 
   .mainHero__button {
@@ -315,6 +405,10 @@ html {
 
   }
 
+  .dots__content {
+    margin: 5% 5% 0;
+  }
+
 }
 
 
@@ -323,7 +417,7 @@ html {
 /*** Functions ***/
 
 .mainFunctions__container {
-  height: 50vw;
+  height: 100vh;
   width: 100%;
 
   display: flex;
@@ -343,6 +437,7 @@ html {
   font-size: 6vw;
   text-align: right;
   color: var(--color-light);
+  margin-top: 5rem;
   
 }
 
@@ -429,7 +524,6 @@ html {
 @media (max-width: 1024px) {
 
   .mainFunctions__container {
-    height: 120vw;
     background: url(photos/running3.jpg) no-repeat top left;
     background-size: cover;
     
@@ -517,7 +611,7 @@ html {
     font-size: 6vw;
     font-family: 'Staatliches', cursive;
     letter-spacing: 0.5vw;
-    margin-top: 3rem;
+    margin-top: 5rem;
     justify-content: space-around;
 }
 
@@ -637,6 +731,24 @@ html {
     margin: 35% 0 0 0;
 }
 
+.team__member--logo h2:hover {
+  animation: shake 0.5s infinite;
+}
+
+@keyframes shake {
+  0% { transform: translate(1px, 1px) rotate(0deg); }
+  10% { transform: translate(-1px, -2px) rotate(-1deg); }
+  20% { transform: translate(-3px, 0px) rotate(1deg); }
+  30% { transform: translate(3px, 2px) rotate(0deg); }
+  40% { transform: translate(1px, -1px) rotate(1deg); }
+  50% { transform: translate(-1px, 2px) rotate(-1deg); }
+  60% { transform: translate(-3px, 1px) rotate(0deg); }
+  70% { transform: translate(3px, 1px) rotate(-1deg); }
+  80% { transform: translate(-1px, -1px) rotate(1deg); }
+  90% { transform: translate(1px, 2px) rotate(0deg); }
+  100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+
 /*** Team media ***/
 
 @media only screen and (min-width: 1024px) {
@@ -657,7 +769,6 @@ html {
 
   .team__headline--header {
       font-size: 2rem;
-      margin-top: 20px;
   }
 
   .team__headline--paragraph {
@@ -1062,3 +1173,51 @@ html {
 
 /*** Footer ***/
 
+
+/*Cookie Consent Begin*/
+#cookieConsent {
+  background-color: rgba(20,20,20,0.8);
+  min-height: 26px;
+  font-size: 14px;
+  color: #ccc;
+  line-height: 26px;
+  padding: 8px 0 8px 30px;
+  font-family: "Trebuchet MS",Helvetica,sans-serif;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: none;
+  z-index: 9999;
+}
+#cookieConsent a {
+  color: #fe466a;
+  text-decoration: none;
+}
+#closeCookieConsent {
+  float: right;
+  display: inline-block;
+  cursor: pointer;
+  height: 20px;
+  width: 20px;
+  margin: -15px 0 0 0;
+  font-weight: bold;
+}
+#closeCookieConsent:hover {
+  color: #FFF;
+}
+#cookieConsent a.cookieConsentOK {
+  background-color: #fe466a;
+  color: white;
+  display: inline-block;
+  border-radius: 5px;
+  padding: 0 20px;
+  cursor: pointer;
+  float: right;
+  margin: 0 60px 0 10px;
+}
+#cookieConsent a.cookieConsentOK:hover {
+  background-color: white;
+  color: black;
+}
+/*Cookie Consent End*/
