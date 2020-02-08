@@ -33,6 +33,53 @@ html {
 
 /*** Variables ***/
 
+/*** Cookies ***/
+​
+.cookie {
+    position: fixed;
+    bottom: 5%;
+    right: 5%;
+    z-index: 99;
+    background-color: rgb(204, 204, 204, 0.5);
+    display: none;
+    border: #fe466a solid 2px;
+    border-radius: 5px;
+    padding: 1rem;
+    width: 40rem;
+    font-family: var(--font-header);
+    color: var(--color-font-light);
+}
+
+@media (max-width:20rem)
+{
+  .cookie
+  {
+    width: 90%;
+    color: var(--color-font-light);
+    font-size: 75%;
+    bottom: 10%;
+    background-color: var(--color-light);
+  }
+}
+
+.cookie-btn, .cookie-btn:visited {
+    background: #39b7dd;
+    color: var(--color-font-light);
+    font-family: var(--font-header);
+    width: 5rem;
+    padding: 10px;
+    margin: 5px;
+    border-radius: 4px;
+    cursor: pointer;
+    border: none;
+}
+​
+.cookie-btn:hover, .cookie-btn:active {
+    background-color: #fe466a;
+    border-radius: 4px;
+    border: none;
+  }
+
 /*** Header ***/
 
 /*** Header ***/
@@ -1126,3 +1173,51 @@ html {
 
 /*** Footer ***/
 
+
+/*Cookie Consent Begin*/
+#cookieConsent {
+  background-color: rgba(20,20,20,0.8);
+  min-height: 26px;
+  font-size: 14px;
+  color: #ccc;
+  line-height: 26px;
+  padding: 8px 0 8px 30px;
+  font-family: "Trebuchet MS",Helvetica,sans-serif;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: none;
+  z-index: 9999;
+}
+#cookieConsent a {
+  color: #fe466a;
+  text-decoration: none;
+}
+#closeCookieConsent {
+  float: right;
+  display: inline-block;
+  cursor: pointer;
+  height: 20px;
+  width: 20px;
+  margin: -15px 0 0 0;
+  font-weight: bold;
+}
+#closeCookieConsent:hover {
+  color: #FFF;
+}
+#cookieConsent a.cookieConsentOK {
+  background-color: #fe466a;
+  color: white;
+  display: inline-block;
+  border-radius: 5px;
+  padding: 0 20px;
+  cursor: pointer;
+  float: right;
+  margin: 0 60px 0 10px;
+}
+#cookieConsent a.cookieConsentOK:hover {
+  background-color: white;
+  color: black;
+}
+/*Cookie Consent End*/
