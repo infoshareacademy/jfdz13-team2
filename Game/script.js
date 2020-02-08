@@ -41,8 +41,10 @@ const jumpDown = () => {
     player.style.top = `${playerStartPosition}px`
     document.getElementById('player-movement').className = 'player-movement player-run';
     
-   
-       isOnTheGround = true
+   setTimeout(()=>{
+        isOnTheGround=true
+   },700)
+    
     
 }
 
