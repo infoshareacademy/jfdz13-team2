@@ -64,6 +64,8 @@ window.addEventListener('keydown', event => {
 
 
 
+
+
 // Obstacles animation //
 
 
@@ -186,4 +188,75 @@ const increaseScore = () => {
 };
 
 increaseScore();
+
+class Diamond {
+    position = worldWidth - 100;
+    domElement = null;
+
+    initilize = () => {
+        const bonus = document.createElement('div');
+        bonus.classList.add("diamond");
+        bonus.style.left = `${this.position}px`;
+        bonus.style.top = `${playerPositionY - (playerHeight / 2)}px`;
+
+        backgroundWorld.appendChild(bonus);
+
+        this.domElement = bonus;
+    }
+
+    move = () => {
+        this.position = this.position - 5;
+        this.domElement.style.left = `${this.position}px`;
+
+
+    }
+
+    checkCollision = () => {
+        if (this.position <= playerPositionX && isOnTheGround) {
+            console.log('trafiony')
+            // document.querySelector('#progres').value -= 20;
+            score += 100;
+            this.domElement.remove();
+            if (playerLife <= 0) {
+                clearInterval(bonusInterval);
+                // window.location = 'gameover.html?score=' + score;
+            }
+            return true
+        }
+
+        return false
+    }
+}
+
+const bonusInterval = setInterval(() => {
+    const diamond = new Diamond();
+    diamond.initilize()
+    if (score >= 1000 && score < 3000) {
+        intervalSpeed = 8;
+    } else if (score >= 3000 && score < 5000) {
+        intervalSpeed = 6;
+    } else if (score >= 5000 && score < 7000) {
+        intervalSpeed = 4;
+    } else if (score >= 7000 && score < 9000) {
+        intervalSpeed = 2;
+    }
+
+
+    const moveInterval = setInterval(() => {
+        diamond.move();
+
+        if (diamond.checkCollision() || diamond.position <= 0 || playerLife <= 0) {
+            clearInterval(moveInterval);
+            diamond.domElement.remove();
+        }
+
+        if (playerLife <= 0) {
+            clearInterval(moveInterval);
+        }
+
+    }, intervalSpeed )
+
+    
+},
+    3000);
 
