@@ -16,6 +16,8 @@
     --font-body: 'Marvel', sans-serif;
     
     --gutter: 1rem;
+
+    --obstaclePosition: 80px;
   }
 
 .background-container {
@@ -24,36 +26,21 @@
     height: 100vh;
     background-image:   
                         url(images/parallax_background/01_ground.png),
-                        url(images/parallax_background/02_trees\ and\ bushes.png),  
-                        url(images/parallax_background/03_distant_trees.png), 
-                        url(images/parallax_background/04_bushes.png),
-                        url(images/parallax_background/05_hill1.png),
-                        url(images/parallax_background/06_hill2.png),
-                        url(images/parallax_background/07_huge_clouds.png),
                         url(images/parallax_background/08_clouds.png),
-                        url(images/parallax_background/09_distant_clouds1.png),
-                        url(images/parallax_background/10_distant_clouds.png),
-                        url(images/parallax_background/11_background.png);
+                        url(images/parallax_background/background_still.png);
                         
     background-size: 100vw 100%;
     background-position: 0px 0px;
-    animation: goLeft 200s linear infinite;
+    animation: goLeft 200s linear;
 }
+
 
 @keyframes goLeft {
     100%{
         background-position:        
+                                -1700vw 0px, 
                                 0vw 0px,
-                                0vw 0px,
-                                0vw 0px,
-                                0vw 0px,
-                                0vw 0px, 
-                                0vw 0px,
-                                -200vw 0px,
-                                -200vw 0px,
-                                -400vw 0px,
-                                -500vw 0px,
-                                -600vw 0px;
+                                -300vw 0px;
     }
 }
 .game-container {
@@ -61,7 +48,6 @@
     display: flex;
     width: 100vw;
     height: 100vh;
-    padding: 20px;
     background-color: var(--color-primary);
     overflow: hidden;
 }
@@ -69,50 +55,36 @@
 .world {
     position: relative;
     display: flex;
-    width: 10000px;
+    width: 100%;
     height: 100%;
     background-color: var(--color-light);
 }
 
 .player {
     position: absolute;
-    width: 200px;
-    height: 200px;
+    width: 120px;
+    height: 180px;
     align-self: flex-end;
-    overflow: hidden;   
+    overflow: hidden;
+    left: 25%;
+    bottom: 50px;
 }
+
+
 
 /**** Player Animation ****/
 
 .player-movement {
     position: relative;
     animation: movement 1s steps(15) infinite;
-    width: 3000px;
-    height: 1000px;
+    width: 1800px;
+    height: 360px;
 }
-
-.player-fall {
-    top: 0px;
-}
-
-.player-idle {
-    top: -200px;
-}
-
-.player-jump {
-    top: -400px;
-}
-
 .player-run {
-    top: -600px;
+    top: -180px;
 }
-
-.player-walk {
-    top: -800px;
-}
-
-.player-down {
-    top: -200px;
+.player-jump {
+    top: 0px;
 }
 @keyframes movement {
     from {
@@ -121,4 +93,125 @@
     to {
         transform: translate3d(-100%,0,0);
     }
+}
+
+/*** Obstacles ***/
+
+.mushroom1 {
+    background: url(images/obstacles/mushroom01.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    align-self: flex-end;
+    overflow: hidden;
+    /* bottom: var(--obstaclePosition); */
+    /* animation: goMushrooms 8s linear infinite; */
+}
+
+.mushroom2 {
+    background: url(images/obstacles/mushroom02.png);
+    position: absolute;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 60px;
+    height: 60px;
+    align-self: flex-end;
+    overflow: hidden;
+    /* bottom: var(--obstaclePosition); */
+    /* animation: goMushrooms 8s linear infinite; */
+}
+
+.mushroom3 {
+    background: url(images/obstacles/mushroom03.png);
+    position: absolute;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 60px;
+    height: 60px;
+    align-self: flex-end;
+    overflow: hidden;
+    /* bottom: var(--obstaclePosition); */
+    /* animation: goMushrooms 8s linear infinite; */
+}
+
+.mushroom4 {
+    background: url(images/obstacles/mushroom04.png);
+    position: absolute;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 60px;
+    height: 60px;
+    align-self: flex-end;
+    overflow: hidden;
+    /* bottom: var(--obstaclePosition); */
+    /* animation: goMushrooms 8s linear infinite; */
+}
+
+.mushroom5 {
+    background: url(images/obstacles/mushroom05.png);
+    position: absolute;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 60px;
+    height: 60px;
+    align-self: flex-end;
+    overflow: hidden;
+    /* bottom: var(--obstaclePosition); */
+    /* animation: goMushrooms 8s linear infinite; */
+}
+
+.mushroom6 {
+    background: url(images/obstacles/mushroom06.png);
+    position: absolute;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 60px;
+    height: 60px;
+    align-self: flex-end;
+    overflow: hidden;
+    /* bottom: var(--obstaclePosition); */
+    /* animation: goMushrooms 8s linear infinite; */    
+}
+
+@keyframes goMushrooms {
+    from {
+        right: -5%;
+    }
+    to {
+        right: 125%
+    }
+}
+
+.score-container {
+    position: absolute;
+    top: 5%;
+    right: 5%;
+    height: 50px;
+    width: 300px;
+    background-image: linear-gradient(315deg, #f9c1b1 0%, #fb8085 74%);
+    padding: 10px;
+    color: lightgoldenrodyellow;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    font-weight: bold;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+
+}
+
+#progres {
+    height: 50px;
+    width: 300px;
+    position: absolute;
+    top: 5%;
+    right: 75%;
+    background-image: linear-gradient(315deg, #f9c1b1 0%, #fb8085 74%);
+    padding: 5px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    font-weight: bold;
 }
