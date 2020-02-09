@@ -87,7 +87,7 @@ html {
 /*** Navigation ***/
 
 .nav {
-  height: 90px;
+  height: 100px;
   width: 100%;
   background-color: #01091C;
   position: sticky;
@@ -155,7 +155,7 @@ html {
 
 .active{
 	color: white;
-	background-color: rgba(100,100,100,1);
+	background-color: var(--color-light);
   border-left: 10px solid #fe466a;
   border-radius: 30px;
 }
@@ -944,6 +944,10 @@ html {
   border: none;
   background: none;
   
+}
+
+.btn-msg:focus {
+  outline: none;
 }
 
   .gdpr {
