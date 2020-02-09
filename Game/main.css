@@ -215,3 +215,47 @@
     text-align: center;
     font-weight: bold;
 }
+
+.diamond1 {
+    background: url(images/crystals/crystal01.png);
+    position: absolute;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 60px;
+    height: 60px;
+    align-self: flex-end;
+    overflow: hidden;
+}
+
+.diamond2 {
+    background: url(images/crystals/crystal02.png);
+    position: absolute;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 60px;
+    height: 60px;
+    align-self: flex-end;
+    overflow: hidden;
+}
+
+.diamond3 {
+    background: url(images/crystals/crystal03.png);
+    position: absolute;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 60px;
+    height: 60px;
+    align-self: flex-end;
+    overflow: hidden;
+}
+
+.diamond4 {
+    background: url(images/crystals/crystal04.png);
+    position: absolute;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 60px;
+    height: 60px;
+    align-self: flex-end;
+    overflow: hidden;
+}
